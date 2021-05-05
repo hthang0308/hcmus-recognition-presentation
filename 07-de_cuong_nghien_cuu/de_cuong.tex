@@ -1,0 +1,248 @@
+%!TeX encoding = UTF-8
+\documentclass{article}
+\usepackage[pdftex]{graphicx} %for embedding images
+\usepackage{url} %for proper url entries
+\usepackage[bookmarks, colorlinks=false, pdfborder={0 0 0}, pdftitle={Final Report - Recognition Spring 2021}, pdfauthor={Nhut-Nam Le}, pdfsubject={Recognition}, pdfkeywords={report, exercises}]{hyperref} %for creating links in the pdf version and other additional pdf attributes, no effect on the printed document
+%\usepackage[final]{pdfpages} %for embedding another pdf, remove if not required
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{pythonhighlight}
+\usepackage[left=3cm, right=3cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{parskip}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage[]{algorithm2e}
+\usepackage[noend]{algpseudocode}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
+
+\lstset{frame=tb,
+	language=Java,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+
+\setlength{\parindent}{15pt}
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+\lhead[<even output>]{NHẬN DẠNG}
+\rhead[<even output>]{ĐỀ CƯƠNG NGHIÊN CỨU}
+\title{research-outline}
+\author{Nhut-Nam Le}
+\date{2021}
+
+\usepackage{enumitem}
+\setlistdepth{20}
+\renewlist{itemize}{itemize}{20}
+
+% initially, use dots for all levels
+\setlist[itemize]{label=$\cdot$}
+
+% customize the first 3 levels
+\setlist[itemize,1]{label=\textbullet}
+\setlist[itemize,2]{label=--}
+\setlist[itemize,3]{label=*}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			% Top of the page
+			\large{\textbf{ĐẠI HỌC KHOA HỌC TỰ NHIÊN, ĐHQG-HCM\\KHOA CÔNG NGHỆ THÔNG TIN\\BỘ MÔN KHOA HỌC MÁY TÍNH}}\\
+			\includegraphics[width=0.75\textwidth]{images/khtn.png}\\
+			% Title
+			\huge \textbf{NHẬN DẠNG}\\[0.1in]
+			\huge \textbf{ĐỀ CƯƠNG NGHIÊN CỨU}\\[0.1in]
+			\vfill
+			\normalsize
+			% Submitted by
+			\normalsize
+			% Lecturers
+			\textbf{Giảng viên lý thuyết}\\
+			{\textbf{PGS. TS.} Lê Hoàng Thái}\\[0.1in]
+			% Teacher Assistant
+			\textbf{Giảng viên hướng dẫn}\\
+			\vspace{0.1in}
+			{Lê Thanh Phong, Nguyễn Ngọc Thảo}\\[0.1in]
+			\textbf{Sinh viên thực hiện} \\
+			\vspace{0.1in}
+			{Nguyễn Hoàng Đức, Lê Nhựt Nam, Nguyễn Viết Dũng}\\[0.1in]
+			% Date time when written report
+			\vfill
+			Tháng 4 năm 2021
+		\end{center}
+	\end{titlepage}
+	\newpage
+	% End Title4
+	
+	\pagenumbering{roman} %numbering before main content starts
+	\cleardoublepage
+	%\pagebreak
+	
+	\newpage
+	\tableofcontents
+	\newpage
+	\pagenumbering{arabic} %reset numbering to normal for the main content
+	\setcounter{secnumdepth}{0}
+	
+	\section{1. THÔNG TIN NHÓM}
+	\begin{itemize}
+		\item Thành viên 01: Nguyễn Hoàng Đức - 18120018
+		\item Thành viên 02: Lê Nhựt Nam - 18120061
+		\item Thành viên 03: Nguyễn Viết Dũng - 18120167
+	\end{itemize}
+	
+	\section{2. THÔNG TIN ĐỀ TÀI}
+	\subsection{Tên đề tài}
+	\begin{itemize}
+		\item Tên đề tài (Tiếng Việt): Sinh trắc học giọng nói
+		\item Tên đề tài (Tiếng Anh): Voice Biometrics
+	\end{itemize}
+	\subsection{Nguồn tham khảo}
+	\begin{itemize}
+		\item Sách: Chương 8: Voice Biometrics, Handbook of Biometric, Anil K. Jain, Patrick Flynn, Arun A.
+		Ross
+		\item Paper with code: Speaker Recognition
+	\end{itemize}
+	Danh sách các bài báo khoa học tham khảo:
+	\begin{itemize}
+		\item Deep neural networks for small footprint text-dependent speaker
+		verification, Ehsan Variani (Johns Hopkins Univ., Baltimore, MD, USA), Xin Lei (Google Inc.,
+		USA), Erik McDermott (Google Inc., USA), Ignacio Lopez Moreno (Google Inc, Mountain View,
+		CA, US), Javier Gonzalez-Dominguez (Google Inc., USA), 2014 IEEE International Conference on Acoustics, Speech and Signal
+		Processing (ICASSP), Florence, Italy
+		\item Multi-Task Learning for Text-Dependent Speaker Verification, Nanxin Chen, Yanmin Qian, Kai Yu (Shanghai Jiao Tong University, China), INTERSPEECH 2015 16th Annual Conference of the International Speech Communication Association, Dresden, Germany, 2015
+		\item X-Vectors: Robust DNN Embeddings for Speaker Recognition, David Snyder, Daniel Garcia-Romero, Gregory Sell, Daniel Povey, Sanjeev Khudanpur (Center for Language and Speech Processing \& Human Language Technology Center of Excellence, The Johns Hopkins University, Baltimore, MD, USA), 2018 IEEE International Conference on Acoustics, Speech and Signal
+		Processing (ICASSP), Calgary, AB, Canada, 2018
+		\item Mirco Ravanelli and Yoshua Bengio. Speaker recognition from raw waveform with sincnet, 2019.
+	\end{itemize}
+	\subsection{Từ khóa}
+	\begin{itemize}
+		\item Tên từ khóa (Tiếng Việt): Nhận dạng sinh trắc học, Nhận dạng giọng nói, Nhận dạng người nói, Mạng Neural Tích chập, Mẫu thô, Xác minh người nói, Định danh người nói
+		\item 	Tên từ khóa (Tiếng Anh): Biometric Recognition, Voice Recognition, Speaker Recognition, Convolutional Neural Networks, Raw Samples, Speaker Verification, Speaker Identification
+	\end{itemize}
+	
+	\subsection{Nội dung trình bày}
+	\qquad Nội dung trình bày trước lớp gồm 2 phần: trình bày nội dung tìm hiểu được từ chương 08 - Voice Biometrics sách Handbook of Biometric, trình bày những phương pháp state-of-the-art về lĩnh vực nhận dạng giọng nói trong thời gian gần đây.
+	
+	Phần trình bày nội dung tìm hiểu được từ sách
+	\begin{itemize}
+		\item Giới thiệu chung
+		\item Những thông tin nhận dạng trong tín hiệu giọng nói
+		\item Rút trích đặc trưng và phân tách
+		\item Hai công nghệ chính của lĩnh vực nhận dạng giọng nói
+	\end{itemize}
+	Phần trình bày những phương pháp state-of-the-art về lĩnh vực nhận dạng giọng nói
+	\begin{itemize}
+		\item Giới thiệu
+		\item Động lực nghiên cứu khoa học
+		\item Phát biểu bài toán
+		\item Các công trình tiêu biểu (khoảng 3 công trình)
+		\begin{itemize}
+			\item Deep neural networks for small footprint text-dependent speaker verification - Đại diện cho d-vectors (Deep Vectors)
+			\item Multi-Task Learning for Text-Dependent Speaker Verification - Đại diện cho j-vectors
+			\item X-Vectors: Robust DNN Embeddings for Speaker Recognition - Đại diện cho x-vectors
+			\item Speaker recognition from raw waveform with sincnet - Đại diện cho Phân lớp người nói
+		\end{itemize}
+		\item So sánh d-vectors, j-vectors và x-vectors
+		\item Demo
+		\item Tài liệu tham khảo
+	\end{itemize}
+	\subsection{Nội dung báo cáo}
+	\begin{itemize}
+		\item Thông tin nhóm
+		\item Thông tin đề tài
+		\item Nội dung phân công
+		\item Nội dung báo cáo
+		\begin{itemize}
+			\item Nội dung tìm hiểu từ sách Handbook of Biometric
+			\begin{itemize}
+				\item Giới thiệu chung
+				\item Thông tin nhận dạng trong tín hiệu giọng nói
+				\item Rút trích đặc trưng và phân tách thông tin
+				\begin{itemize}
+					\item Phân tích theo từng đoạn ngắn
+					\item Tham số hóa
+					\item Phân tách ngữ âm và tách từ
+					\item Phân tách ngữ điệu
+				\end{itemize}
+				\item Công nghệ nhận dạng giọng nói phụ thuộc văn bản
+				\item Công nghệ nhận dạng giọng nói không phụ thuộc văn bản
+			\end{itemize}
+			\item Các phương pháp SOTA
+			\begin{itemize}
+				\item Giới thiệu chung định hướng gần đây
+				\item Động lực nghiên cứu
+				\item Phát biểu bài toán: Đầu vào (Input), Đầu ra (Output)
+				\item Kho ngữ liệu
+				\item Kiểm định mô hình nhận dạng giọng nói
+				\item Các độ đo thường dùng trong nhận dạng giọng nói
+				\item Các công trình tiêu biểu
+				\begin{itemize}
+					\item Trong tác vụ rút trích đặc trưng
+					\begin{itemize}
+						\item d-vectors
+						\item j-vectors
+						\item x-vectors
+						\item So sánh d-vectors, j-vectors và x-vectors
+					\end{itemize}
+					\item Trong phân lớp người nói
+					\begin{itemize}
+						\item Variational autoencoder
+						\item Multi-domain features
+						\item SincNet
+					\end{itemize}
+				\end{itemize}
+			\end{itemize}
+			\item Thực nghiệm: Sử dụng SincNet trong xác minh và định danh người nói
+			\begin{itemize}
+				\item Chuẩn bị dữ liệu
+				\item Xây dựng mô hình
+				\item Đăng ký
+				\item Đánh giá
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+	\subsection{Xây dựng demo cho chủ đề nghiên cứu}
+	\begin{itemize}
+		\item Phương pháp giải quyết vấn đề
+		\item Dữ liệu thực nghiệm
+		\begin{itemize}
+			\item Tên tập dữ liệu: TIMIT Acoustic-Phonetic Continuous Speech Corpus
+			\item Tác giả: 	John S. Garofolo, Lori F. Lamel, William M. Fisher, Jonathan G. Fiscus, David S. Pallett, Nancy L. Dahlgren, Victor Zue
+			\item Năm: 1993
+			\item DCMI Type(s): âm thanh - sound
+			\item Sample Type: 1-channel pcm (mono channel)
+			\item Nguồn thu dữ liệu: microphone speech
+			\item Ngôn ngữ: tiếng Anh
+			\item Kích thước: 630 người nói từ 8 đặc trưng giọng Anh Mỹ, 1,3GB
+		\end{itemize}
+		\item Thực nghiệm và đánh giá
+	\end{itemize}
+	
+	\section{3.	THÔNG TIN TỰ ĐÁNH GIÁ TIẾN ĐỘ}
+	\subsection{Những công việc đã thực hiện được}
+	
+	\subsection{Những công việc chưa thực hiện được}
+\end{document}
