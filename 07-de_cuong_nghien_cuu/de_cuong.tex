@@ -1,8 +1,8 @@
-%!TeX encoding = UTF-8
+%!TeX encoding = UTF-8 Unicode
 \documentclass{article}
 \usepackage[pdftex]{graphicx} %for embedding images
 \usepackage{url} %for proper url entries
-\usepackage[bookmarks, colorlinks=false, pdfborder={0 0 0}, pdftitle={Final Report - Recognition Spring 2021}, pdfauthor={Nhut-Nam Le}, pdfsubject={Recognition}, pdfkeywords={report, exercises}]{hyperref} %for creating links in the pdf version and other additional pdf attributes, no effect on the printed document
+\usepackage[bookmarks, colorlinks=false, pdfborder={0 0 0}, pdftitle={Research Outline - Recognition Spring 2021}, pdfauthor={Nhut-Nam Le}, pdfsubject={Recognition}, pdfkeywords={report, exercises}]{hyperref} %for creating links in the pdf version and other additional pdf attributes, no effect on the printed document
 %\usepackage[final]{pdfpages} %for embedding another pdf, remove if not required
 \usepackage[utf8]{inputenc}
 \usepackage[vietnamese]{babel}
@@ -227,22 +227,91 @@
 	\subsection{Xây dựng demo cho chủ đề nghiên cứu}
 	\begin{itemize}
 		\item Phương pháp giải quyết vấn đề
+		\begin{itemize}
+			\item Dựa trên source code chính thức SincNet từ tác giả
+			\item Huấn luyện mô hình xác minh người nói bằng tiếng Anh, tiếng Việt
+		\end{itemize}
 		\item Dữ liệu thực nghiệm
 		\begin{itemize}
-			\item Tên tập dữ liệu: TIMIT Acoustic-Phonetic Continuous Speech Corpus
-			\item Tác giả: 	John S. Garofolo, Lori F. Lamel, William M. Fisher, Jonathan G. Fiscus, David S. Pallett, Nancy L. Dahlgren, Victor Zue
-			\item Năm: 1993
-			\item DCMI Type(s): âm thanh - sound
-			\item Sample Type: 1-channel pcm (mono channel)
-			\item Nguồn thu dữ liệu: microphone speech
-			\item Ngôn ngữ: tiếng Anh
-			\item Kích thước: 630 người nói từ 8 đặc trưng giọng Anh Mỹ, 1,3GB
+			\item TIMIT Acoustic-Phonetic Continuous Speech Corpus
+			\begin{itemize}
+				\item Tác giả: 	John S. Garofolo, Lori F. Lamel, William M. Fisher, Jonathan G. Fiscus, David S. Pallett, Nancy L. Dahlgren, Victor Zue
+				\item Năm: 1993
+				\item DCMI Type(s): âm thanh - sound
+				\item Sample Type: 1-channel pcm (mono channel)
+				\item Nguồn thu dữ liệu: microphone speech
+				\item Ngôn ngữ: tiếng Anh
+				\item Kích thước: 630 người nói từ 8 đặc trưng giọng Anh Mỹ, 1,3GB
+			\end{itemize}
+			\item Librispeech
+			\begin{itemize}
+				\item Tên đầy đủ: LibriSpeech ASR corpus
+				\item Bài báo: LibriSpeech: an ASR corpus based on public domain audio books
+				\item Tác giả/ Nhóm tác giả: Vassil Panayotov, Guoguo Chen, Daniel Povey and Sanjeev Khudanpur
+				\item Được công bố tại hội nghị The international Conference on Acoustics, Speech, \& Signal Processing (ICASSP), 2015
+				\item Mô tả sơ lược: Kho ngữ liệu có kích thước khoảng 1000 giờ nói tiếng Anh với tần số 16kHz
+			\end{itemize}
+			\item Son et al. Dataset
+			\begin{itemize}
+				\item Bài báo: Vietnamese Speaker Authentication Using Deep Models
+				\item Dung lượng của tập dữ liệu: 535 MB
+				\item Số mẫu trong tập dữ liệu: 400 mẫu
+				\item Bộ dữ liệu gồm: hai tập  Men và Women, mỗi tập con chứa 10 thư mục người nói. Mỗi thư mục người nói chứa 20 đoạn ghi âm, chia ra Long và Short (mỗi loại 10 đoạn) 
+				\item Nội dung câu nói
+				\begin{itemize}
+					\item Câu ngắn: “Tôi là sinh viên chuyên ngành công nghệ thông tin"
+					\item Câu dài: "Tôi là sinh viên Học viện Công nghệ Bưu chính Viễn thông, chương trình đào tạo khá nặng đòi hỏi sinh viên phải học tập và nghiên cứu rất nhiều nhưng tôi tự hào vì đó là ngành đã và đang làm thay đổi cuộc sống xã hội loài người".
+				\end{itemize}
+				\item Điểm hạn chế: Bộ dữ liệu có kích thước khá nhỏ
+			\end{itemize}
 		\end{itemize}
+		
+		
 		\item Thực nghiệm và đánh giá
+		\begin{itemize}
+			\item Trực quan hóa quá trình huấn luyện dựa trên các thông số: average training loss, classification error, average test loss, classification error frame level test data, classification error sentence level test data
+			\item Dự đoán người nói từ mô hình
+			\item Xác minh người nói bằng cosine similarity
+		\end{itemize}
 	\end{itemize}
 	
 	\section{3.	THÔNG TIN TỰ ĐÁNH GIÁ TIẾN ĐỘ}
 	\subsection{Những công việc đã thực hiện được}
-	
+	Về những kiến thức chương 8 - sách Handbook of Biometrics
+	\begin{itemize}
+		\item Nắm cái nhìn chung về lĩnh vực Nhận dạng Giọng nói.
+		\item Những yếu tố nhận dạng trong tín hiệu hiệu giọng nói.
+		\item Hai công nghệ chính trong lĩnh vực nhận dạng giọng nói.
+		\item Một số kỹ thuật thủ công trong xử lý một số đặc trưng nhận dạng tín hiệu giọng nói.
+		\item Chuẩn bị slides thuyết trình cho phần này.
+	\end{itemize}
+	Về những kiến thức các phương pháp state-of-the-art trong lĩnh vực Nhận dạng Giọng nói
+	\begin{itemize}
+		\item Nắm sơ bộ những thành tựu gần đây trong lĩnh vực Nhận dạng Giọng nói.
+		\item Nắm sơ bộ key methods, phương pháp, hiệu năng của một số phương pháp Deep Learning trong rút trích đặc trưng tín hiệu giọng nói.
+		\item Nắm sơ bộ key methods, phương pháp, hiệu năng của một số phương pháp Deep Learning trong phân lớp tín hiệu giọng nói.
+		\item Chuẩn bị slides thuyết trình cho phần này.
+	\end{itemize}
+	Về Tìm kiếm open source / libraries / demonstration để minh họa cho nội dung lý thuyết
+	\begin{itemize}
+		\item Tìm kiếm và đọc hiểu source code SincNet
+		\item Quá trình hoạt động của các bộ lọc, kiến trúc mạng 
+		\item Đã huấn luyện thành công mô hình cho tiếng Anh (train và test trên TIMIT, Librispeech) và tiếng Việt (train và test trên tập Son et al. Dataset)
+		\item Đã kiểm thử similarity trên một vài file âm thanh đầu vào với tiếng Anh, tiếng Việt
+	\end{itemize}
 	\subsection{Những công việc chưa thực hiện được}
+	Về những kiến thức chương 8 - sách Handbook of Biometrics
+	\begin{itemize}
+		\item Điều chỉnh slides thuyết trình
+	\end{itemize}
+	Về tìm kiếm open source / libraries / demonstration để minh họa cho nội dung lý thuyết
+	\begin{itemize}
+		\item Hoàn chỉnh 2 giai đoạn đầu tiên của một Speaker Recognition Pipeline (data preparation và development models, basic testing), chưa thực hiện enrollment, evaluation đầy đủ
+		\item Số lượng epochs huấn luyện cho mô hình tiếng Anh, tiếng Việt còn khá thấp với (100 epochs với TIMIT và Librispeech, 300 epochs Son et al. Dataset)
+	\end{itemize}
+	\subsection{Hướng giải quyết khó khăn}
+	\begin{itemize}
+		\item Tiếp tục tìm hiểu và phát triển hoàn chỉnh Speaker Recognition Pipeline 
+		\item Tìm kiếm một bộ dữ liệu cho tiếng Việt lớn hơn
+	\end{itemize}
 \end{document}
