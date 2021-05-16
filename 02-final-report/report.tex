@@ -28,6 +28,8 @@
 \newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
 \newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
 
+\newcommand{\foo}{\hspace{-2.3pt}$\bullet$ \hspace{5pt}}
+
 \lstset{frame=tb,
 	language=Java,
 	aboveskip=3mm,
@@ -96,30 +98,60 @@
 	\setcounter{secnumdepth}{0}
 	
 	\section{A. Thông tin nhóm}
-	\begin{tabular}{ | c | c | c | c |}\hline
-		STT	& MSSV & Họ tên đầy đủ & Email liên lạc \T\B\\\hline
-		1	& 18120018 & Nguyễn Hoàng Đức &  18120018@student.hcmus.edu.vn\T\B\\\hline
-		2	& 18120061 & Lê Nhựt Nam &  18120061@student.hcmus.edu.vn\T\B\\\hline
-		3	& 18120167 & Nguyễn Viết Dũng & 18120167@student.hcmus.edu.vn\T\B\\ \hline
-	\end{tabular}
-			
+	\begin{table}[H]
+		\begin{tabular}{ | p{1cm} |  p{3cm} | p{5cm} | p{5cm}  |}\hline
+			STT	& MSSV & Họ tên đầy đủ & Email liên lạc \T\B\\\hline
+			1	& 18120018 & Nguyễn Hoàng Đức &  18120018@student.hcmus.edu.vn\T\B\\\hline
+			2	& 18120061 & Lê Nhựt Nam &  18120061@student.hcmus.edu.vn\T\B\\\hline
+			3	& 18120167 & Nguyễn Viết Dũng & 18120167@student.hcmus.edu.vn\T\B\\ \hline
+		\end{tabular}
+	\end{table}		
 	\section{B. Thông tin đề tài}
 	
-	\textbf{Tên đề tài:} Nhân trắc học giọng nói - Voice Biometrics\newline
-	\textbf{Nguồn:} Chương 8: Voice Biometrics, Handbook of Biometric, Anil K. Jain, Patrick Flynn, Arun A. Ross\newline
-	\textbf{Từ khóa tiếng Anh:} Biometric Recognition, Voice Recognition, Speaker Recognition, Convolutional Neural Networks, Raw Samples\newline
-	\textbf{Từ khóa tiếng Việt:} Nhận dạng sinh trắc học, Nhận dạng giọng nói, Nhận dạng người nói/ Giọng nói, Mạng Neural Tích chập, Mẫu thô
+	\textbf{Tên đề tài:} 
+	\begin{itemize}
+		\item Tên đề tài (Tiếng Việt): Sinh trắc học giọng nói
+		\item Tên đề tài (Tiếng Anh): Voice Biometrics
+	\end{itemize}
+	\textbf{Nguồn:} 
+	\begin{itemize}
+		\item Sách: Chương 8: Voice Biometrics, Handbook of Biometric, Anil K. Jain, Patrick Flynn, Arun A.
+		Ross
+		\item Github - Nguồn Source Code
+		\item Paper with Code - Nguồn paper kèm theo source cài đặt chính thức của nhóm tác, cộng đồng
+	\end{itemize}
+	\textbf{Từ khóa:} 
+	\begin{itemize}
+		\item Tên từ khóa (Tiếng Việt): Nhận dạng sinh trắc học, Nhận dạng giọng nói, Nhận dạng người nói, Mạng Neural Tích chập, Mẫu thô, Xác minh người nói, Định danh người nói
+		\item 	Tên từ khóa (Tiếng Anh): Biometric Recognition, Voice Recognition, Speaker Recognition, Convolutional Neural Networks, Raw Samples, Speaker Verification, Speaker Identification
+	\end{itemize}
 	
 	\section{C. Nội dung phân công}
 	\begin{center}
-		\begin{tabular}{ | l | l | l | p{5cm} | p{3cm} |}
+		\begin{tabular}{| l | l | l | p{5.5cm} | p{3cm} |}
 			\hline
-			STT & MSSV & Họ tên & Nội dung công việc & Mức độ hoàn thành công việc  \T\B\\ \hline
+			STT & MSSV & Họ tên & Nội dung công việc & Hoàn thiện (\%)\T\B\\ \hline
 			1 & 18120018 & Nguyễn Hoàng Đức & Thu thập dữ liệu, đọc hiểu source, báo cáo Related Work Paper & 100\%\T\B \\ \hline
 			2 & 18120061 & Lê Nhựt Nam & Thu thập dữ liệu, đọc hiểu source, báo cáo, SincNet Architecture, Slides thuyết trình, Midterm Report & 100\%\T\B \\ \hline
 			3 & 18120167 & Nguyễn Viết Dũng &  Thu thập dữ liệu, đọc hiểu source, báo cáo experimental setup Paper & 100\%\T\B \\ \hline
 		\end{tabular}
 	\end{center}
+	\scalebox{1}{
+		\begin{tabular}{r |@{\foo} l}
+			
+			29/03 - 04/04 & Tiếp nhận đồ án, phân công công việc\\
+			05/04 - 11/04 & Đọc source code mẫu từ Github, trình bày những gì tìm hiểu được\\
+			12/04 - 18/04 & Chạy thử source code mẫu từ Github, trình bày những gì tìm hiểu được\\
+			19/04 - 25/04 & Trình bày những gì tìm hiểu được, phân công làm slides, trình bày đồ án\\
+			26/04 - 02/05 & Thu thập dữ liệu, tiền xử lý dữ liệu\\
+			03/05 - 09/05 & Tinh chỉnh source code, chạy thử mô hình\\
+			10/05 - 16/05 & Huấn luyện mô hình\\
+			17/05 - 23/05 & Phân công làm slides, trình bày đồ án\\
+			24/05 - 30/05 & *Dự phòng\\
+			31/05 - 06/06 & *Dự phòng\\
+			
+		\end{tabular}
+	}
 	\section{D. Nội dung báo cáo}
 	\section{D.1 Nội dung tìm sách Handbook of Biometrics}
 	\subsection{1. Giới thiệu}
@@ -158,6 +190,7 @@
 	
 	Quá trình hình thành giọn nói là chủ đề nghiên cứu của các nhà ngữ âm học và một số lĩnh vực liên quan đến phân tích giọng nói khác (kỹ sư, bác sĩ, v.v.). Trong cả hai giai đoạn của quá trình tạo giọng nói (tạo ngôn ngữ và tạo giọng nói), các đặc điểm cụ thể của người nói đều được giới thiệu. Trong lĩnh vực sinh trắc học giọng nói - còn được gọi là nhận dạng người nói - hai thành phần này tương ứng với nó thường được gọi là đặc điểm cấp cao (ngôn ngữ) và cấp thấp (âm thanh).
 	
+	\subsubsection{2.1 Đặc trưng Idiolectal}
 	\paragraph{Idiolectal characteristics - Đặc trưng Idiolectal}
 	Idiolectal = idio (personal, private) + (dia)lect
 	\begin{itemize}
@@ -166,10 +199,12 @@
 		\item Ngôn ngữ đa dạng duy nhất cho một người nói một ngôn ngữ được gọi là idiolect. idiolect của bạn bao gồm các từ vựng phù hợp với các sở thích và hoạt động khác nhau của bạn, cách phát âm phản ánh khu vực bạn đang sống hoặc đã sống và các phong cách nói khác nhau thay đổi một cách tinh vi tùy thuộc vào người bạn đang nói đến
 	\end{itemize}
 	
+	\subsubsection{2.2 Đặc trưng ngữ âm}
 	\paragraph{Phonotactics characteristics - Đặc trưng ngữ âm} mô tả cách sử dụng của người nói của các đơn vị điện thoại và khả năng nhận ra khả dụng. 
 	
 	Ngữ âm là rất cần thiết cho việc sử dụng đúng đắn về một ngôn ngữ, và một chìa khóa trong việc học ngoại ngữ, nhưng khi chúng ta nhìn vào nét đặc trưng phonotactic người nói, chúng ta có thể tìm thấy một số kiểu sử dụng khác biệt với những người dùng khác.
 	
+	\subsubsection{2.3 Đặc trưng ngữ điệu}
 	\paragraph{Prosody characteristics - Đặc trưng ngữ điệu}
 	Prosody (ngữ điệu), là sự kết hợp của năng lượng tức thời, âm điệu, tốc độ nói và thời lượng đơn vị để cung cấp cho lời nói sự tự nhiên, đầy đủ ý nghĩa và giọng điệu cảm xúc. 
 	
@@ -177,6 +212,7 @@
 	
 	Những theo cách mà mỗi người nói sử dụng các thành phần ngữ điệu khác nhau, nhiều đặc trưng của người bị trùng lặp, ví dụ như các đường đặc trưng bị trùng nhau ở điểm đầu và điểm của của một cụm hoặc nhóm giọng nói.
 	
+	\subsubsection{2.3 Đặc trưng phổ}
 	\paragraph{Spectral characteristics - Đặc trưng phổ}
 	 đặc trưng phổ rời rạc của tín hiệu giọng nói, liên quan trực tiếp với hành động phát âm đơn lẻ, quan hệ với tạo ra ngữ âm và cũng liên quan đến sinh lý cá nhân của quá trình phát sinh giọng nói. 
 	 
@@ -191,7 +227,7 @@
 	\subsection{3. Rút trích đặc trưng và Tokenization}
 	\qquad Bước đầu trong việc xây dưng một hệ thống nhận dạng người nói tự động là rút trích các đặc trưng đáng tin cậy và những tokens có chứa thông tin nhận dạng. .
 	
-	\subsubsection{3.1 Phân tích theo từng đoạn ngắn (Short-term Analysis)}
+	\subsubsection{3.1 Phân tích cửa sổ (Short-term Analysis)}
 	\qquad Để thực hiện phân tích phổ đáng tin cậy, các tín hiệu phải thể hiện các đặc tính tĩnh, điều này không dễ quan sát trong các tín hiệu lời nói thay đổi liên tục. 
 	
 	Để giải quyết vấn đề trên, người ta thường giới hạn cửa sổ phân tích, thường dùng cửa sổ dạng cosine như hamming hoặc hanning, của mình ở độ dài ngắn từ 20 đến 40 mili giây, hệ thống ngữ âm của chúng ta không thể thay đổi đáng kể trong một khung thời gian ngắn như vậy, thu được những gì thường được gọi là tín hiệu giả tĩnh trên mỗi khung. Quá trình này được mô tả trong hình 8.1 sách Handbook of Biometrics.
@@ -293,7 +329,7 @@
 	\subsection{5. Nhận dạng giọng nói độc lập với văn bản}
 	\qquad Hệ thống nhận dạng giọng nói độc lập với văn bản cố gắng giảm thiểu ảnh hưởng của nội dung từ vựng vốn được coi là không xác định đối với khả năng nhận dạng của giọng nói, điều này trái ngược với hệ thống nhận dạng giọng nói phụ thuộc văn bản, đương nhiên việc nghiên cứu và phát triển nó sẽ khó khăn hơn.
 	
-	\subsubsection{5.1 Short-term spectral systems - Hệ thống phổ âm trong thời gian ngắn}
+	\subsubsection{5.1 Short-term spectral systems - Hệ thống cửa sổ phổ âm}
 	\qquad Khi phân tích phổ trong khoảng thời gian ngắn được sử dụng để mô hình các đặc trưng người nói, chúng ta đang mô hình hóa các “âm thanh” khác nhau mà một người có thế tạo ra, nhờ vào đường âm và các cơ quan cấu âm của họ. Khi con người cần nhiều âm thanh (hoặc các ký hiệu âm học khác nhau) để nói bằng bất kỳ ngôn ngữ chung nào, chúng ta rõ ràng đang đối mặt với một \textbf{không gian đa lớp gồm nhiều đặc trưng}.
 	
 	Kỹ thuật Lượng tử hóa Vector (\textbf{Vector Quantization techniques}) hiệu quả trong các bài toán đa lớp như vậy và đã được sử dụng để xác định người người, điển hình là một mô hình VQ cụ thể cho một người nói, tính toán khoảng cách từ bất kỳ câu nói nào đến bất kỳ mô hình nào dưới dạng tổng trong số của khoảng cách tối tiểu trên mỗi khung đến codevector gần của codebook. Việc sử dụng các giới hạn và các điểm trung tâm thay vì dùng mật độ xác suất làm hiệu suất của VQ kém hơn so với mô hình Markov ẩn với mật độ liên tục và liên thông hay còn gọi là Ergodic HMMs. 
@@ -386,7 +422,7 @@
 
 	Hình trên là một bảng chứa 17 token ngữ điệu. Một token đại diện cho các phân đoạn vô thanh, trong khi 16 token được sử dụng để đại diện cho các phân đoạn hữu thanh tùy thuộc vào độ dốc (phát nhanh, tăng chậm, giảm nhanh, giảm chậm) của năng lượng và cao độ.
 	
-	\subsubsection{5.5 Cơ sở dữ liệu và benchmarks}
+	\subsubsection{5.5 Kho ngữ liệu và benchmarks}
 	\begin{itemize}
 		\item Vào năm 1996, NIST bắt đầu Đánh giá Nhận dạng Giọng nói -Speaker Recognition Evaluations hàng năm, đây chắc chắn là động lực của những tiến bộ đáng kể.
 		\item Các hội thảo sau đánh giá đã cho phép người tham gia chia sẻ kinh nghiệm, cải tiến, thất bại, v.v. của họ trong một môi trường hợp tác cao. Vai trò của LDC (Linguistic Data Consortium) cung cấp tài liệu nói mới đầy thách thức cũng rất đáng chú ý, vì nhu cầu liên tục tăng lên (cả về lượng lời nói và yêu cầu ghi âm)
@@ -411,7 +447,7 @@
 		\label{fig:writing-thesis}
 	\end{figure}
 
-	\section{D.2 Các phương pháp SOTA - State of The Art trong Voice Biometrics}
+	\section{D.2 Các phương pháp SOTA - State of The Art gần đây về Voice Biometrics}
 	\subsection{D.2.1 Giới thiệu}
 	Những phương pháp đã tìm hiểu từ sách Handbook of Biometrics: Voice Biometrics đã cho chúng ta cái nhìn tổng quan về lĩnh vực Nhận dạng giọng nói và những phương pháp truyền thống (tạm gọi là thời kỳ trước Deep Learning) cùng với những thông tin các công trình nghiên cứu nổi bật. Tuy nhiên, gần đây với sự phát triển trong lý thuyết Học Máy cùng với những thành công đầy hy vọng của Học Sâu (Deep Learning) thì lĩnh vực Nhận dạng Giọng nói đã và đang tiếp tục phát triển.
 	
@@ -434,7 +470,7 @@
 		\item Đầu ra (Output): Đồng ý/ Từ chối
 	\end{itemize}
 
-	\subsection{D.2.4 Kho ngữ liệu/ Cơ sở dữ liệu}
+	\subsection{D.2.4 Một số kho ngữ liệu}
 	\qquad Cũng giống như các lĩnh vực khác của Học Máy, câu hỏi quan trọng ngay từ ban đầu là dữ liệu. Trong phần này, nhóm giới thiệu một số cơ sở dữ liệu phục vụ cho việc huấn luyện các mô hình, cho các tác vụ như speaker identification, speaker verification, speaker recognition.\newline
 	\textbf{Kho ngữ liệu TIMIT (Garofolo et al., 1993)}
 	\begin{itemize}
@@ -460,12 +496,6 @@
 		Communication association (Interspeech), tại Portland, United States, năm 2012
 		\item Mô tả sơ lược: Cơ sở dữ liệu RSR2015 chứa các bản ghi âm từ 300 người, 143 nữ và 157 diễn giả nam. Những người tham gia được chọn để trở thành đại diện cho sự phân bố dân tộc của người Singapore. Các diễn giả được chọn từ 17 đến 42 tuổi. Mỗi người trong số những người tham gia ghi lại chín phiên bằng cách sử dụng ba thiết bị di động. Mỗi phiên bao gồm ba mươi câu ngắn.
 	\end{itemize}
-	\textbf{Kho ngữ liệu HiME2013 (Vincent et al., 2013)}
-	\begin{itemize}
-		\item Tên đầy đủ:
-		\item Tác giả/ Nhóm tác giả:
-		\item Mô tả sơ lược:
-	\end{itemize}
 	\textbf{Kho ngữ liệu Librispeech (Panayotov et.al, 2015)}
 	\begin{itemize}
 		\item Tên đầy đủ: LibriSpeech ASR corpus
@@ -486,12 +516,6 @@
 		\item Tên đầy đủ: VoxCeleb: a large-scale speaker identification dataset
 		\item Tác giả/ Nhóm tác giả: Arsha Nagrani, Joon Son Chung, Andrew Zisserman (Visual Geometry Group, Department of Engineering Science, University of Oxford, UK)
 		\item Mô tả sơ lược: kho ngữ liệu chứa hơn 100.000 câu nói cho 1.251 người nổi tiếng, được trích xuất từ các video tải lên YouTube. Bộ dữ liệu cân bằng về giới tính, với 55\% người nói là nam giới. Các diễn giả trải dài một loạt các sắc tộc, giọng, nghề nghiệp và độ tuổi khác nhau. Quốc tịch và giới tính của mỗi người nói (lấy từ Wikipedia) cũng được cung cấp.
-	\end{itemize}
-	\textbf{Kho ngữ liệu NIST SRE (Greenberg et. al, 2017)}
-	\begin{itemize}
-		\item Tên đầy đủ:
-		\item Tác giả/ Nhóm tác giả: 
-		\item Mô tả sơ lược:
 	\end{itemize}
 	\textbf{Kho ngữ liệu VoxCeleb2 (Chung et. al, 2018)}
 	\begin{itemize}
@@ -550,10 +574,8 @@
 	\end{itemize}
 	
 	
-	\subsection{D.2.5 Học sâu trong tác vụ rút trích đặc trưng giọng nói}
-	% \subsubsection{Về i-vectors và GMM-UBM trước đây}
-	% Phần này mình chưa biết là có thêm vô hay không, rãnh thì viết vì nó nằm ở mục cũ rồi. Chút suy nghĩ thêm nhé Nam
-	\subsubsection{Về d-vectors}
+	\subsection{D.2.5 Học Sâu trong tác vụ rút trích đặc trưng giọng nói}
+	\subsubsection{D.2.5.1 Về d-vectors}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.75\linewidth]{images/d-vectors.png}
@@ -635,7 +657,7 @@
 		\item EER vẫn chưa tốt so với hệ thống i-vectors
 	\end{itemize}
 	
-	\subsubsection{Về j-vectors}
+	\subsubsection{D.2.5.2 Về j-vectors}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.75\linewidth]{images/j-vectors.png}
@@ -653,7 +675,36 @@
 	\end{itemize}
 
 	\textbf{Phương pháp}
+	Mô hình Học đa nhiệm Deep Neural Network sử dụng cho Xác minh người nói phụ thuộc văn bản được lấy ý tưởng từ việc sử dụng DNN với số lượng tham số cực lớn, một mô hình DNN có thể học cùng lúc việc phân tách văn bản, lẫn giọng nói
 	
+	Hai hàm mất mát ban đầu là $C_1(y_1, y_1'), C_2(y_2, y_2')$ được dùng để tạo thành hàm tổng mất mát:
+	$$C([y_1, y_2], [y_1', y_2']) = C_1(y_1, y_1') + C_2(y_2, y_2')$$
+	Trong đó:
+	\begin{itemize}
+		\item $C_1, C_2$ lần lượt là hai cross-entropy criteria cho giọng nói và văn bản
+		\item $y_1, y_2$ đại diện cho nhãn đúng của từng người nói và văn bản
+		\item $y_1', y_2'$ đại diện cho nhãn đầu ra (nhãn dự đoán được) của $y_1, y_2$ tương ứng
+	\end{itemize}
+	
+	Mỗi khi tiến trình của multi-task neural network huấn luyện xong, lớp output sẽ bị loại bỏ, phần còn lại của neural network sẽ được dùng để rút trích biểu diễn kết hợp giữa giọng nói và văn bản (sử dụng lớp ẩn cuối cùng) sau đó lấy trung bình, gọi là \textbf{j-vectors} (hay \textbf{joint-vector}) điểm này khá tương tự với d-vectors
+	
+	Có nhiều độ đo có thể sử dụng trong giai đoạn đăng ký, ở bài báo này, nhóm tác giả trình bày 2 cách thực hiện
+	\begin{itemize}
+		\item Joint Gaussian Discriminant Function
+		$$\mathit{N}(x|\mu_k,\Sigma_k) = \frac{1}{(2\pi)^{\frac{p}{2}}|\Sigma_k|^{\frac{1}{2}}}e^{-\frac{1}{2}(x-\mu_k)^T\Sigma^{-1}(x-\mu_k)}$$
+		Trong đó:
+		\begin{itemize}
+			\item $\Sigma_k$ là hiệp phương sai lớp k
+			\item $\mu_k$ là trung bình lớp k
+			\item $p$ là số chiều của vector
+		\end{itemize}
+		Mô hình LDA giả định rằng $\Sigma_k = \Sigma$, nhóm tác giả cho biết hàm discriminant function cho lớp thứ k như sau:
+		$$df_k(x) = -\frac{1}{2} \times (x - \mu_k)^T\Sigma^{-1}(x-\mu_k)$$
+		Và do trên trường hợp tập đóng, biểu thức có thể được rút gọn do giá trị $x^T\Sigma x$ có giá trị như nhau trên mọi lớp. Ta có một biểu thức tuyến tính (GDF)
+		$$df_k' = (\Sigma^{-1}\mu_k)x + \left(-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k\right)$$
+		\item Probabilistic Linear Discriminant Analysis
+		$$P(\mu_k) = N(\mu_k|m, \theta_b)$$
+	\end{itemize}
 	\textbf{Các kết quả}
 	\begin{figure}[H]
 		\centering
@@ -681,8 +732,14 @@
 	\end{figure}
 	
 	\textbf{Nhận xét}
+	\begin{itemize}
+		\item Bài báo đề xuất một framework sử dụng kỹ thuật Deep Learning cho tác vụ xác minh người nói phụ thuộc văn bản có kết quả hết sức có triển vọng
+		\item Áp dụng học đa nhiệm (giọng nói và văn bản), rút trích ra j-vectors
+		\item Sử dụng Gaussian Discriminant Function và Probability Linear Discriminant Analysis, hai kỹ thuật mạnh trong việc phân lớp giọng nói
+		\item Kết quả tốt hơn, cho độ lỗi thấp hơn rất nhiều so với d-vector, r-vector trên tác vụ xác minh người nói phụ thuộc văn bản
+	\end{itemize}
 	
-	\subsubsection{Về x-vectors}
+	\subsubsection{D.2.5.3 Về x-vectors}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.75\linewidth]{images/x-vector.jpg}
@@ -702,16 +759,37 @@
 				\item \textbf{Sanjeev Khudanpur} - Center for Language and Speech Processing \& Human Language Technology Center of Excellence, The Johns Hopkins University, Baltimore, MD, USA
 			\end{itemize}
 		\item Được xuất bản tại hội nghị 2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), diễn ra tại Calgary, AB, Canada, năm 2018
-		\item Từ khóa: Speaker recognition, Deep neural networks, Data augmentation, x-vectors
+		\item Từ khóa: Speaker Recognition, Deep Neural Networks, Data Augmentation, x-vectors
 	\end{itemize}
 	
 	\textbf{Phương pháp}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.75\linewidth]{images/x-vectors-setup.png}
-		\caption{x-vector DNN embedding architecture in (Snyder et al., 2018)}
+		\includegraphics[width=0.75\linewidth]{images/x_vectors_dnn.png}
+		\caption{x-vectors DNN - From i-vectors to x-vectors – a generational change in speaker recognition illustrated on the NFI-FRIDA database - OxfordWave Research}
 		\label{fig:writing-thesis}
 	\end{figure}
+	Với 5 layers đầu tiên thực hiện tính toán trên các khung giọng nói với một ngữ cảnh thời gian nhỏ tập trung vào khung hiện tại, gọi là t. Ví dụ, đầu vào của frame2 là đầu ra của frame1, tại các frames t-2 và t + 2, thì tổng ngữ cảnh thời gian ở frame2 là 9
+	
+	Statistics pooling layer (lớp tổng hợp thống kê) tổng hợp tất cả các đầu ra ở mức khung T từ lớp frame5 và tính toán giá trị trung bình và độ lệch chuẩn của nó. Hai giá trị gồm giá trị trung bình và độ lệch chuẩn được kết lại, được đưa qua các lớp phân đoạn và cuối cùng qua lớp đầu ra softmax
+	
+	x-vectors sẽ được rút trích tại lớp phân đoạn 6 (segment6), ngay sau khi qua lớp tổng hợp thống kê
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\linewidth]{images/x-vectors-setup.png}
+		\caption{Configuration Table of x-vector DNN embedding architecture in (Snyder et al., 2018)}
+		\label{fig:writing-thesis}
+	\end{figure}
+
+	Việc so sánh hai x-vector được mô hình như sau: Sử phân phối same-speaker và different speaker để ước lượng likelihood score để đưa ra so sánh hai vectors
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\linewidth]{images/comparing_x_vectors.png}
+		\caption{x-vectors DNN - From i-vectors to x-vectors – a generational change in speaker recognition illustrated on the NFI-FRIDA database - OxfordWave Research}
+		\label{fig:writing-thesis}
+	\end{figure}
+
 	\textbf{Các kết quả}
 	\begin{figure}[H]
 		\centering
@@ -733,15 +811,40 @@
 	\end{figure}
 	
 	\textbf{Nhận xét}
+	\begin{itemize}
+		\item Hiệu suất của x-vectors đã được chứng minh là tốt hơn đáng kể so với i-vectors, đặc biệt là ở khoảng thời gian ngắn.
+		\item Học có giám sát, x-vectors DNN được huấn luyện bằng cách dùng dữ liệu có nhãn người nói
+		\item DNN x-vector có khả năng khai thác lượng dữ liệu huấn luyện lớn hơn so với khung i-vector, nó bão hòa sau một lượng dữ liệu huấn luyện nhất định.
+		\item khả năng khai thác lượng dữ liệu huấn luyện lớn hơn cũng tạo điều kiện cho một phương pháp thúc đẩy số lượng và tính đa dạng của dữ liệu huấn luyện được gọi là tăng cường dữ liệu. Quá trình này thêm tiếng ồn và nhiễu vào các mẫu huấn luyện và đưa chúng vào huấn luyện cùng với các mẫu ban đầu.
+		\item Khả năng sử dụng cùng front-end (trích xuất đặc trưng) và back-end (so sánh vector) cho cả hệ thống i-vectơ và x-vectơ tạo điều kiện tích hợp hệ thống và cho phép so sánh trực tiếp hơn giữa hai phương pháp mô hình hóa.
+	\end{itemize}
 	
-	\subsubsection{So sánh d-vectors, j-vectors và x-vectors}
-	
-	\subsection{D.2.5 Học sâu trong tác vụ phân lớp giọng nói}
-	\subsubsection{Variational autoencoder}
-	\textbf{Cơ bản về Auto-Encoder}
-	
-	
-	\subsubsection{Multi-domain features}
+	\subsubsection{D.2.5.4 So sánh d-vectors, j-vectors và x-vectors}
+		\begin{table}[H]
+		\centering
+		\begin{tabular}{ |p{2cm} |p{4cm} | p{4cm} | p{4cm}  |}\hline
+			& d-vectors & j-vectors & x-vector \\\hline
+			Kỹ thuật rút trích & DNN & DNN & DNN\\ \hline
+			Ví trí rút trích & Tại lớp ẩn cuối cùng DNN & Tại lớp ẩn cuối cùng DNN & Sau khi qua lớp statistics pooling\\\hline
+			Cách rút trích & Là trung bình kích hoạt tại lớp ẩn cuối cùng & Là trung bình kích hoạt tại lớp ẩn cuối cùng, kết hợp tín hiệu giọng nói và dữ liệu văn bản & Là vector phân đoạn (segment6) sau khi tính toán thống kê\\\hline
+		\end{tabular}
+	\end{table}
+	\subsection{D.2.5 Học Sâu trong tác vụ phân lớp giọng nói}
+	\subsubsection{D.2.5.1 Multi-domain features}
+	\textbf{Giới thiệu chung về bài báo:}
+	\begin{itemize}
+		\item Tên bài báo: Multi-task Recurrent Model for Speech and Speaker Recognition
+		\item Nhóm tác giả: Zhiyuan Tang (1) (2) , Lantian Li (1) and Dong Wang (1)
+		\begin{itemize}
+			\item (1): Center for Speech and Language Technologies, Division of Technical Innovation and Development,
+			Tsinghua National Laboratory for Information Science and Technology
+			Center for Speech and Language Technologies, Research Institute of Information Technology, Tsinghua University
+			\item (2): Chengdu Institute of Computer Applications, Chinese Academy of Sciences
+		\end{itemize}
+		\item Bài báo được đăng trên arXiv.org, vào ngày 31, tháng 3 năm 2016 (Phiên bản mới nhất được cập nhật vào ngày 27 tháng 9 năm 2016)
+		\item Từ khóa: Multi-task, Recurrent Model, Speaker Recognition, 
+	\end{itemize}
+	\textbf{Phương pháp}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.75\linewidth]{images/multi-task-recurrent-learning.png}
@@ -753,20 +856,73 @@
 		\includegraphics[width=0.75\linewidth]{images/basis-single-task-model.png}
 		\label{fig:writing-thesis}
 	\end{figure}
+	\begin{gather*}
+		i_t = \sigma(W_{ix}x_t + W_{ir}r_{t-1} + W_{ic}c_{t-1}=b_i)\\
+		f_t = \sigma(W_{fx}x_t + W_{fr}r_{t-1} + W_{fc}c_{t-1}+b_f)\\
+		c_t = f_t \odot c_{t-1} + i_t \odot g(W_{cx}x_t + W_{cr}r_{t-1} + b_c)\\
+		o_t = \sigma(W_{ox}x_t + W_{or}r_{t-1} + W_{oc}c_t + b_o)\\
+		m_t = o_t \odot h(c_t)\\
+		r_t = W_{rm}m_t\\
+		p_t = W_{pm}m_t\\
+		y_t = W_{yr}r_t + W_{yp}p_t + b_y\\
+	\end{gather*}
 	\textbf{Multi-task model}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.75\linewidth]{images/multi-task-recurrent-model.png}
 		\label{fig:writing-thesis}
 	\end{figure}
-	
-	\subsubsection{Sử dụng Contrastive Loss để so sánh vector}
-	\qquad Việc dùng softmax layer trong một hệ thống backend DNN tạo ra nhiều lợi ích cho việc phân lớp người nói. Tuy nhiên việc so sánh hai vectors (hai mô hình giọng nói) vẫn rất cần thiết
-	
-	Việc so sánh này được thực hiện bằng cách dùng Contrastive Loss - giới thiệu trong bài báo Learning a similarity metric discriminatively, with application to face verification, năm 2005 
-	
-		
-	\subsubsection{SincNet}
+	\textbf{Speech recognition (ASR)}
+	\begin{gather*}
+		i^{\alpha}_t = \sigma(W^{\alpha}_{ix}x_t + W^{\alpha}_{ir}r^{\alpha}_{t-1} + W^{\alpha}_{ic}c^{\alpha}_{t-1}+b^{\alpha}_i)\\
+		f^{\alpha}_t = \sigma(W_{fx}x_t + W_{fr}r_{t-1} + W_{fc}c_{t-1}+b_f)\\
+		g^{\alpha}_t = g(W^{\alpha}_{cx}x^{\alpha}_t + W^{\alpha}_{cr}r^{\alpha}_{t-1} + b^{\alpha}_{c} + \underline{W^{\alpha s}_{cr}r^{s}_{t-1} + W^{\alpha s}_{cp}p^{s}_{t-1}})\\
+		c^{\alpha}_t = f_t \odot c_{t-1} + i_t \odot g(W_{cx}x_t + W_{cr}r_{t-1} + b_c)\\
+		o^{\alpha}_t = \sigma(W^{\alpha}_{ox}x^{\alpha}_t + W^{\alpha}_{or}r^{\alpha}_{t-1} + W^{\alpha}_{oc}c^{\alpha}_t + b^{\alpha}_o)\\
+		m^{\alpha}_t = o^{\alpha}_t \odot h(c^{\alpha}_t)\\
+		r^{\alpha}_t = W^{\alpha}_{rm}m^{\alpha}_t\\
+		p^{\alpha}_t = W^{\alpha}_{pm}m^{\alpha}_t\\
+		y^{\alpha}_t = W^{\alpha}_{yr}r^{\alpha}_t + W^{\alpha}_{yp}p^{\alpha}_t + b^{\alpha}_y\\
+	\end{gather*}
+	\textbf{Speaker recognition (SRE)}
+	\begin{gather*}
+		i^{s}_t = \sigma(W^{s}_{ix}x_t + W^{s}_{ir}r^{s}_{t-1} + W^{s}_{ic}c^{s}_{t-1}+b^{s}_i)\\
+		f^{s}_t = \sigma(W_{fx}x_t + W_{fr}r_{t-1} + W_{fc}c_{t-1}+b_f)\\
+		g^{s}_t = g(W^{s}_{cx}x^{s}_t + W^{s}_{cr}r^{s}_{t-1} + b^{s}_{c} + \underline{W^{s\alpha}_{cr}r^{s}_{t-1} + W^{s\alpha}_{cp}p^{s}_{t-1}})\\
+		c^{s}_t = f_t \odot c_{t-1} + i_t \odot g(W_{cx}x_t + W_{cr}r_{t-1} + b_c)\\
+		o^{s}_t = \sigma(W^{s}_{ox}x^{s}_t + W^{s}_{or}r^{s}_{t-1} + W^{s}_{oc}c^{s}_t + b^{s}_o)\\
+		m^{s}_t = o^{s}_t \odot h(c^{s}_t)\\
+		r^{s}_t = W^{s}_{rm}m^{s}_t\\
+		p^{s}_t = W^{s}_{pm}m^{s}_t\\
+		y^{s}_t = W^{s}_{yr}r^{s}_t + W^{s}_{yp}p^{s}_t + b^{s}_y\\
+	\end{gather*}
+	\textbf{Các kết quả}
+	\begin{itemize}
+		\item Dữ liệu
+		\item ASR baseline
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\linewidth]{images/multi-task-recurrent-model-asr-baseline-res.png}
+			\label{fig:writing-thesis}
+		\end{figure}
+		\item SRE baseline
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\linewidth]{images/multi-task-recurrent-model-sre-baseline-res.png}
+			\label{fig:writing-thesis}
+		\end{figure}
+		\item Multi-task joint training
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\linewidth]{images/multi-task-recurrent-model-joint-training-res.png}
+			\label{fig:writing-thesis}
+		\end{figure}
+	\end{itemize}
+	\textbf{Nhận xét}
+	\begin{itemize}
+		\item 
+	\end{itemize}
+	\subsubsection{D.2.5.1 SincNet}
 	\qquad \textbf{Giới thiệu chung về bài báo}
 	\begin{itemize}
 		\item Nhóm tác giả trong bài báo này đề xuất một kiến trúc mạng CNN (Convolutional Neural Networks) mới, được gọi là SincNet, khai phá lớp tích chập đầu tiên để khám phá nhiều thông tin hơn. SincNet dựa trên các hàm $sinc$ được tham số hóa, để cài đặt các bộ lọc băng thông.
@@ -1031,9 +1187,120 @@
 	
 	Ngoài ra, nhóm tự ghi âm thêm dữ liệu với độ dài tương tự như tập này.
 	\subsection{E.3 Thực nghiệm}
-	
+	\subsubsection{E.3.1 Thực nghiệm trên tập TIMIT}
+	\begin{itemize}
+		\item Xử lý dữ liệu
+		\item Mô hình 
+		\begin{itemize}
+			\item Các cửa sổ có $\text{fs} = 16000$, tín hiệu được cắt thành những chunks với $\text{cw\_len}=200$, overlap $\text{cw\_shift}=10$s
+			\item Lớp Input: sử dụng 80 bộ lọc SincNet có kích thước $L=251$, max pool - 3, sử dụng Layer Norm cho cả input và output, không dùng Batch Norm, hàm kích hoạt activation leaky-ReLU, dropout = 0
+			\item Hai lớp CNN: sử dụng 2 lớp CNN, với mỗi lớp dùng 60 bộ lọc có kích thuốc $L=5$, sử dụng Layer Norm cho cả input và output, không dùng Batch Norm, hàm kích hoạt activation leaky-ReLU, dropout = 0
+			\item Ba lớp DNN: sử dụng 3 lớp DNN (Multi Layer Perceptron) fully-connected với 2048 neurons, Layer Norm cho input, Batch Norm cho output, các lớp ẩn (hidden layers) dùng leaky-ReLU
+			\item Lớp Output: Multi Layer Perceptron, 462 nodes, không dropout, không LayerNorm, không BatchNorm cho cả input và output, hàm activation function dùng softmax
+			\item Hàm mất mát: Negative Log Likelihood Loss
+		\end{itemize}
+		\item Hyper parameters
+		\begin{itemize}
+			\item learning rate $\text{lr} = 0.001$
+			\item $\alpha = 0.95$
+			\item $\epsilon = 10^{-7}$
+			\item $\text{batch\_size}=128$
+			\item $\text{N\_epochs}=100$
+			\item $\text{N\_batches}=800$
+			\item $\text{N\_eval\_epoch}=8$
+			\item $\text{seed}=1234$
+		\end{itemize}
+	\end{itemize}
+	\subsubsection{E.3.2 Thực nghiệm trên tập Librispeech}
+	\begin{itemize}
+		\item Xử lý dữ liệu
+		\item Mô hình 
+		\begin{itemize}
+			\item Các cửa sổ có $\text{fs} = 8000$, tín hiệu được cắt thành những chunks với $\text{cw\_len}=375$, overlap $\text{cw\_shift}=10$s
+			\item Lớp Input: sử dụng 80 bộ lọc SincNet có kích thước $L=251$, max pool - 3, sử dụng Layer Norm cho cả input và output, không dùng Batch Norm, hàm kích hoạt activation leaky-ReLU, dropout = 0
+			\item Hai lớp CNN: sử dụng 2 lớp CNN, với mỗi lớp dùng 60 bộ lọc có kích thuốc $L=5$, sử dụng Layer Norm cho cả input và output, không dùng Batch Norm, hàm kích hoạt activation leaky-ReLU, dropout = 0
+			\item Hai lớp DNN: sử dụng 2 lớp DNN (Multi Layer Perceptron) fully-connected với 2048 neurons, Layer Norm cho input, Batch Norm cho output, các lớp ẩn (hidden layers) dùng leaky-ReLU làm activation cho lớp DNN thứ nhất, lớp kia dùng linear
+			\item Lớp Output: 2 lớp Multi Layer Perceptron, 2048 nodes cho mỗi lớp, không dropout, Layer Norm cho input, Batch Norm cho output, hàm activation function lớp thứ nhất dùng leaky-ReLU, lớp thứ hai dùng softmax
+			\item Hàm mất mát: Negative Log Likelihood Loss
+		\end{itemize}
+		\item Hyper parameters
+		\begin{itemize}
+			\item learning rate $\text{lr} = 0.001$
+			\item $\alpha = 0.95$
+			\item $\epsilon = 10^{-7}$
+			\item $\text{batch\_size}=128$
+			\item $\text{N\_epochs}=100$
+			\item $\text{N\_batches}=100$
+			\item $\text{N\_eval\_epoch}=10$
+			\item $\text{reg\_factor}=1000$
+			\item $\text{fact\_amp=0.2}$
+			\item $\text{seed}=1234$
+		\end{itemize}
+	\end{itemize}
+	\subsubsection{E.3.2 Thực nghiệm trên tập Son et al. Dataset}
+	\begin{itemize}
+		\item Xử lý dữ liệu
+		\item Mô hình 
+			\begin{itemize}
+			\item Các cửa sổ có $\text{fs} = 16000$, tín hiệu được cắt thành những chunks với $\text{cw\_len}=200$, overlap $\text{cw\_shift}=10$s
+			\item Lớp Input: sử dụng 80 bộ lọc SincNet có kích thước $L=251$, max pool - 3, sử dụng Layer Norm cho cả input và output, không dùng Batch Norm, hàm kích hoạt activation leaky-ReLU, dropout = 0
+			\item Hai lớp CNN: sử dụng 2 lớp CNN, với mỗi lớp dùng 60 bộ lọc có kích thuốc $L=5$, sử dụng Layer Norm cho cả input và output, không dùng Batch Norm, hàm kích hoạt activation leaky-ReLU, dropout = 0
+			\item Ba lớp DNN: sử dụng 3 lớp DNN (Multi Layer Perceptron) fully-connected với 2048 neurons, Layer Norm cho input, Batch Norm cho output, các lớp ẩn (hidden layers) dùng leaky-ReLU
+			\item Lớp Output: Multi Layer Perceptron, 18 nodes, không dropout, không LayerNorm, không BatchNorm cho cả input và output, hàm activation function dùng softmax
+			\item Hàm mất mát: Negative Log Likelihood Loss
+		\end{itemize}
+		\item Hyper parameters
+		\begin{itemize}
+			\item learning rate $\text{lr} = 0.001$
+			\item $\alpha = 0.95$
+			\item $\epsilon = 10^{-7}$
+			\item $\text{batch\_size}=128$
+			\item $\text{N\_epochs}=300$
+			\item $\text{N\_batches}=100$
+			\item $\text{N\_eval\_epoch}=1$
+			\item $\text{seed}=1234$
+		\end{itemize}
+	\end{itemize}
 	\subsection{E.4 Các kết quả}
-	
+	\subsubsection{E.4.1 Kết quả thực nghiệm trên tập TIMIT}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.75\textwidth]{result/evaluate_result_timit.png}
+		\caption{Kết quả thực nghiệm trên TIMIT Dataset}
+		\label{fig:writing-thesis}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.75\textwidth]{result/sincnet_timit_plot.png}
+		\caption{Kết quả thực nghiệm trên TIMIT Dataset}
+		\label{fig:writing-thesis}
+	\end{figure}
+	\subsubsection{E.4.2 Kết quả thực nghiệm trên tập Librispeech}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.75\textwidth]{result/evaluate_result_libris.png}
+		\caption{Kết quả thực nghiệm trên Librispeech Dataset}
+		\label{fig:writing-thesis}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.75\textwidth]{result/sincnet_librispeech_plot.png}
+		\caption{Kết quả thực nghiệm trên Librispeech Dataset}
+		\label{fig:writing-thesis}
+	\end{figure}
+	\subsubsection{E.4.3 Kết quả thực nghiệm trên tập Son et al. Dataset}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.75\textwidth]{result/evaluate_result_vn_speaker.png}
+		\caption{Kết quả thực nghiệm trên Son et al. Dataset}
+		\label{fig:writing-thesis}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.75\textwidth]{result/sincnet_vietnamese_plot.png}
+		\caption{Kết quả thực nghiệm trên Son et al. Dataset}
+		\label{fig:writing-thesis}
+	\end{figure}
 	\subsection{E.5 Những nhận xét}
 	
 	\nocite{*}
