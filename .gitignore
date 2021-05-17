@@ -376,4 +376,4 @@ TSWLatexianTemp*
 *.sta
 
 # pdf 
-*.pdf
+#*.pdf

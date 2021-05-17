@@ -845,6 +845,9 @@
 		\item Từ khóa: Multi-task, Recurrent Model, Speaker Recognition, 
 	\end{itemize}
 	\textbf{Phương pháp}
+	
+	Trong bài báo này, nhóm tác giả đề xuất một kiến trúc lặp lại mới có thể sử dụng để học các vụ có tính tương quan. Ý tưởng cơ bản của nó là sử dụng đầu ra của một tác vụ như một đầu vào vào của những tác vụ khác (khá tương tự với kiến trúc RNN thông thường). Kết quả đầu ra của một tác vụ ở bước thời gian trước đó $t-1$ được sử dụng để cung cấp cho một tác vụ ở thời điểm $t$ hiện tại.
+	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.75\linewidth]{images/multi-task-recurrent-learning.png}
@@ -897,8 +900,14 @@
 		y^{s}_t = W^{s}_{yr}r^{s}_t + W^{s}_{yp}p^{s}_t + b^{s}_y\\
 	\end{gather*}
 	\textbf{Các kết quả}
+	Các quả mà nhóm tác giả thưc nghiệm có thấy nhiều kết quả đáng mong đợi và hết sức triển vọng.
+	
 	\begin{itemize}
-		\item Dữ liệu
+		\item Dữ liệu: Nhóm tác sử dụng cơ sở dữ liệu WSJ, có dán nhãn cả từ lẫn người nói
+		\begin{itemize}
+			\item Bộ dữ liệu huấn luyện: 90\% bộ dữ liệu là dữ liệu giọng nói được chọn ngẫu nhiên từ tập huấn luyện si284, 10\% còn lại được sử dụng cho việc kiểm tra nhận dạng người nói. Bao gồm 282 người nói và 33,587 lần nói với 40-144 lần nói trên mỗi người, được sử dụng để đào tạo hai hệ thống đơn tác vụ dựa trên LSTM, hệ thống cơ sở i-vector SRE và hệ thống đa nhiệm vụ được đề xuất.
+			\item Bộ dữ liệu kiểm tra: gồm 3 bộ datasets (dev93, eval192, eval193), thực hiện trên hai tác vụ ASR và SRE. Với tác vụ SRE, đánh giá bao gồm 21,350 target trials và 528,326 non-target trials
+		\end{itemize}
 		\item ASR baseline
 		\begin{figure}[H]
 			\centering
@@ -920,7 +929,8 @@
 	\end{itemize}
 	\textbf{Nhận xét}
 	\begin{itemize}
-		\item 
+		\item Nhóm tác giả giới thiệu một kiến trúc mạng học lặp lại có thể huấn luyện cùng lúc nhiều tác vụ, có tính tương quan nghịch
+		\item Kết quả trên cơ sở dữ liệu cho thấy nhiều triễn vọng cho kiến trúc nói riêng, và những hướng hướng tiếp cận đa nhiệm nói chung, nó đã chứng minh rằng phương pháp được trình bày có thể học các mô hình giọng nói và diễn giả đồng thời và cải thiện hiệu suất trên cả hai tác vụ
 	\end{itemize}
 	\subsubsection{D.2.5.1 SincNet}
 	\qquad \textbf{Giới thiệu chung về bài báo}
@@ -1190,6 +1200,10 @@
 	\subsubsection{E.3.1 Thực nghiệm trên tập TIMIT}
 	\begin{itemize}
 		\item Xử lý dữ liệu
+		\begin{itemize}
+			\item Việc xử lý dữ liệu không cần nhiều sự phức tạp, nhưng cần phải thiết lập lại đường dẫn về dạng lowercase "train/dr1/fcjf0/si1027.wav"
+			\item Chạy file TIMIT\_preparation.py chuẩn hóa dữ liệu
+		\end{itemize}
 		\item Mô hình 
 		\begin{itemize}
 			\item Các cửa sổ có $\text{fs} = 16000$, tín hiệu được cắt thành những chunks với $\text{cw\_len}=200$, overlap $\text{cw\_shift}=10$s
@@ -1214,6 +1228,9 @@
 	\subsubsection{E.3.2 Thực nghiệm trên tập Librispeech}
 	\begin{itemize}
 		\item Xử lý dữ liệu
+		\begin{itemize}
+			\item Việc xử lý dữ liệu không cần nhiều sự phức tạp, nhưng cần phải thiết lập lại đường dẫn về dạng lowercase "train/dr1/fcjf0/si1027.wav"
+		\end{itemize}
 		\item Mô hình 
 		\begin{itemize}
 			\item Các cửa sổ có $\text{fs} = 8000$, tín hiệu được cắt thành những chunks với $\text{cw\_len}=375$, overlap $\text{cw\_shift}=10$s
@@ -1240,6 +1257,10 @@
 	\subsubsection{E.3.2 Thực nghiệm trên tập Son et al. Dataset}
 	\begin{itemize}
 		\item Xử lý dữ liệu
+		\begin{itemize}
+			\item Việc xử lý dữ liệu không cần nhiều sự phức tạp, nhưng cần phải thiết lập lại đường dẫn về dạng lowercase "train/dr1/fcjf0/si1027.wav"
+			\item Có một chút thay đổi về source code so với tác giả, nhầm chuẩn hóa dữ liệu âm thâm về dạng mono channel
+		\end{itemize}
 		\item Mô hình 
 			\begin{itemize}
 			\item Các cửa sổ có $\text{fs} = 16000$, tín hiệu được cắt thành những chunks với $\text{cw\_len}=200$, overlap $\text{cw\_shift}=10$s
@@ -1259,6 +1280,12 @@
 			\item $\text{N\_batches}=100$
 			\item $\text{N\_eval\_epoch}=1$
 			\item $\text{seed}=1234$
+		\end{itemize}
+		\item Đánh giá mô hình
+		\begin{itemize}
+			\item FER (Frame Error Rate)
+			\item CER (Classification Error Rate)
+			
 		\end{itemize}
 	\end{itemize}
 	\subsection{E.4 Các kết quả}
@@ -1297,12 +1324,33 @@
 	\end{figure}
 	\begin{figure}[H]
 		\centering
+		\includegraphics[width=.75\textwidth]{result/vietnamese_res.png}
+		\caption{Kết quả thực nghiệm trên Son et al. Dataset}
+		\label{fig:writing-thesis}
+	\end{figure}
+	 Quá trình huấn luyện loss\_tr=0.034833 (NLLLoss), err\_tr=0.012031 (FER),  loss\_te=0.113608 (NLLLoss),  err\_te=0.030943 (FER), err\_te\_snt=0.000000 (CER)
+	\begin{figure}[H]
+		\centering
 		\includegraphics[width=.75\textwidth]{result/sincnet_vietnamese_plot.png}
 		\caption{Kết quả thực nghiệm trên Son et al. Dataset}
 		\label{fig:writing-thesis}
 	\end{figure}
 	\subsection{E.5 Những nhận xét}
-	
+	Tổng kết lại những gì tìm hiểu được
+	\begin{itemize}
+		\item Về lý thuyết:
+		\begin{itemize}
+			\item Sinh trắc học giọng nói là một lĩnh lớn có nhiều ứng dụng, với các phương pháp truyền thống giải quyết tương đối bài toán này
+			\item Các phương pháp hiện đại sử dụng các phương pháp rút trích đặc trưng dựa vào mạng Học Sâu (d-vectors, j-vectors và x-vectors) đem lại nhiều kết quả khả quan, đầy mong đợi
+			\item Đặc biệt, với bài toán phân lớp giọng nói việc kết hợp đa nhiệm trở nên một hướng giải quyết tốt cho bài toán này. Ngoài ra, SincNet đem lại một làn gió mới, khi tận dụng và tối ưu lại CNN truyền thống bằng các bộ lọc hình Sinc, giúp tác vụ nhận dạng người nói có nhiều triễn vọng khi kết hợp với d-vectors, DNN-class.
+		\end{itemize} 
+		\item Về thực hành:
+		\begin{itemize}
+			\item Nhóm đã thực hiện thu thập dữ liệu, huấn luyện cơ bản, nắm cách hoạt động của một Speaker Recognition Pipeline
+			\item Đọc hiểu source code Pytorch implement SincNet của tác, thiết lập và tùy chỉnh lại theo đúng với dữ liệu của nhóm
+			\item Trực quan kết quả, đạt được những kết quả tương đối tốt và gần giống với kết quả từ bài báo
+		\end{itemize}
+	\end{itemize}
 	\nocite{*}
 	\bibliography{references}\newpage\cleardoublepage
 	\bibliographystyle{plain}
