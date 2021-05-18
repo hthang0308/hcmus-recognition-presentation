@@ -90,7 +90,23 @@
 	\pagenumbering{roman} %numbering before main content starts
 	\cleardoublepage
 	%\pagebreak
+	\phantomsection
+	\addcontentsline{toc}{section}{Lời cảm ơn}
+	\section*{Lời cảm ơn}
+	\vspace{1.0in}
+	\begingroup
+	\setlength{\parindent}{0pt}
+	\qquad Trong quá trình thực hiện đồ án này, chúng em đã nhận được rất nhiều sự giúp đỡ cũng như hỗ trợ từ các thầy cô Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM và các bạn bè trong lớp Nhận dạng. Chúng em xin bày tỏ lòng cảm ơn chân thành đến mọi người vì đã giúp đỡ hướng dẫn, chỉ bảo rất tận tình.
 	
+	Đặc biệt, chúng em xin bày tỏ lòng biết ơn sâu sắc đến các thầy cô khoa Công nghệ Thông tin, cụ thể hơn là thầy Hoàng Thái, thầy Thanh Phong và các thầy, cô hướng dẫn đã giảng dạy rất nhiệt, cung cấp nhiều slides, tài nguyên học tập cần thiết, tạo điều kiện tốt nhất để chúng em có thể hoàn thành được đồ án này.
+	
+	Trong lúc viết báo cáo này, chúng em không thể tránh khỏi nhiều thiếu sót, hy vọng mong nhận được góp ý từ thầy để chúng em tiếp tục hoàn thiện hơn đối với đồ án này, cũng như rút kinh nghiệm cho những đồ án, những báo cáo kế tiếp.
+	
+	\vspace{1.0in}
+	\textbf{Đại học Khoa học Tự nhiên, ĐHQG-HCM.}\\
+	Nguyễn Hoàng Đức, Lê Nhựt Nam, Nguyễn Viết Dũng\\
+	Tháng 5 năm 2021\\
+	\endgroup
 	\newpage
 	\tableofcontents
 	\newpage
@@ -336,7 +352,7 @@
 	
 	Tuy nhiên, yếu tố quan trọng trong \textbf{E-HMM} là tích số trạng thái với hàm Gaussian mỗi trạng thái, điều này loại bỏ triệt để ảnh hưởng của quá trình chuyển đổi trong mô hình liên thông. Sau đó, một hệ thống HMM với 5 trạng thái - 4 Gaussian cho mỗi trạng thái sẽ hoạt động tương tự như 4-trạng thái 5-Gaussian, 2-trạng thái 10-Gaussian, hoặc thậm chí là 1-trạng thái 20-Gaussian,  mà một cách hiểu tổng quát là GMM (\textbf{Gaussian Mixture Model}). Những one-state \textbf{E-HMMs} hoặc \textbf{GMMs} này có lợi thế lớn, tránh được cả ước lượng Baum-Welch cho việc huấn luyện, không cần sự liên kết giữa lời nói và trạng thái (tất cả lời nói đều được tinh chỉnh với cùng một trạng thái duy nhất) và dùng Viterbi decoding cho việc việc kiểm thử (không cần tinh chỉnh thời gian), giúp tăng tốc thời gian tính toán mà không ảnh hưởng đến hiệu suất.
 	
-	\textbf{GMM} là một kỹ thuật tổng hợp trong đó một hỗn hợp các hàm Gaussians Đa chiều cố gắng mô hình hóa phân phối thống kê chưa rõ của dữ liệu người nói. GMM trở thành một kỹ thuật hiện đại vào những năm 1990, cả khi \textbf{Maximum likehood} (Tối đa hóa kỳ vong \textbf{Expectation-Maximization}, EM) hoặc huấn luyện phân loại (\textbf{Maximum Mutual Information}, MMI) còn được dùng. Tuy nhiên, việc sử dụng MAP tương thích với hầu hết phương tiện từ một \textbf{Universal Background Model} (UBM) đã mang lại cho GMMs một lợi thế lớn so với các kỹ thuật khác, đặc biệt khi được sử dụng với các kỹ thuật chuẩn hóa như \textbf{Z-standar}d (chuẩn hóa điểm giả), \textbf{T-norm} (chuẩn hóa âm thanh), \textbf{H-norm} (chuẩn Z phụ thuộc vào thiết bị cầm tay), \textbf{HT-norm} (H + T-norm) hoặc \textbf{Feature Mapping} (xác định và chuẩn hóa kênh).
+	\textbf{GMM} là một kỹ thuật tổng hợp trong đó một hỗn hợp các hàm Gaussians Đa chiều cố gắng mô hình hóa phân phối thống kê chưa rõ của dữ liệu người nói. GMM trở thành một kỹ thuật hiện đại vào những năm 1990, cả khi \textbf{Maximum likehood} ((Cực đại triển vọng) \textbf{Expectation-Maximization}, EM) hoặc huấn luyện phân loại (\textbf{Maximum Mutual Information}, MMI) còn được dùng. Tuy nhiên, việc sử dụng MAP tương thích với hầu hết phương tiện từ một \textbf{Universal Background Model} (UBM) đã mang lại cho GMMs một lợi thế lớn so với các kỹ thuật khác, đặc biệt khi được sử dụng với các kỹ thuật chuẩn hóa như \textbf{Z-standar}d (chuẩn hóa điểm giả), \textbf{T-norm} (chuẩn hóa âm thanh), \textbf{H-norm} (chuẩn Z phụ thuộc vào thiết bị cầm tay), \textbf{HT-norm} (H + T-norm) hoặc \textbf{Feature Mapping} (xác định và chuẩn hóa kênh).
 	
 	\textbf{Discriminative techniques} - Kỹ thuật phân tách như \textbf{Artificial Neural Networks}, đã được sử dụng trong nhiều năm, nhưng hiệu suất của chúng chưa bao giờ đạt đến hiệu suất của \textbf{GMM}. Tuy nhiên, vào cuối những năm 90, \textbf{SVM - Support Vector Machine} được ví như một bộ phân loại hiệu năng cao được huấn luyện sẵn, mang lại cho \textbf{GMM} một đối thủ cạnh tranh vì hiệu suất gần như tương đương bằng việc sử dụng \textbf{SVM} trong không gian nhiều chiều hơn với các kernel tích hợp như GLDS (\textbf{Generalized Linear Discriminant Sequence Kernel})
 	
@@ -1194,8 +1210,6 @@
 		\end{itemize}
 		\item Điểm hạn chế: Bộ dữ liệu có kích thước khá nhỏ
 	\end{itemize}
-	
-	Ngoài ra, nhóm tự ghi âm thêm dữ liệu với độ dài tương tự như tập này.
 	\subsection{E.3 Thực nghiệm}
 	\subsubsection{E.3.1 Thực nghiệm trên tập TIMIT}
 	\begin{itemize}
@@ -1285,7 +1299,6 @@
 		\begin{itemize}
 			\item FER (Frame Error Rate)
 			\item CER (Classification Error Rate)
-			
 		\end{itemize}
 	\end{itemize}
 	\subsection{E.4 Các kết quả}

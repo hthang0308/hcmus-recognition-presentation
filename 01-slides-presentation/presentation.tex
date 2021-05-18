@@ -228,7 +228,9 @@
 	
 	ĐẠI HỌC KHOA HỌC TỰ NHIÊN
 	
-	KHOA CÔNG NGHỆ THÔNG TIN - BỘ MÔN KHOA HỌC MÁY TÍNH
+	KHOA CÔNG NGHỆ THÔNG TIN
+	
+	BỘ MÔN KHOA HỌC MÁY TÍNH
 	\titlepage
 \end{frame}
 \begin{frame}{Nội dung trình bày}
@@ -276,7 +278,7 @@
 \end{frame}
 
 \subsection{Rút trích đặc trưng và phân tách dữ liệu}
-\begin{frame}{Phân tích theo từng đoạn ngắn (Short-term Analysis)}
+\begin{frame}{Phân tích cửa sổ (Short-term Analysis)}
 	\begin{figure}[h!]
 		\includegraphics[width=0.9\linewidth]{images/figure_8_1.png}
 		\caption{Handbook of Biometrics, page 155}
@@ -344,23 +346,31 @@
 		\item Phương pháp thống kê: Nổi bật nhất là mô hình Markov ẩn (HMM), cho phép chọn đơn vị tiếng nói từ đơn vị âm vị phụ đến từ và cho phép thiết kế hệ thống nhắc văn bản.
 	\end{itemize}
 \end{frame}
-\begin{frame}{Công trình tiêu biểu}
-	\begin{itemize}
-		\item Introduction 1
-		\item Introduction 2
-		\item Introduction 3
-	\end{itemize}
-\end{frame}
 
 \subsection{Nhận dạng giọng nói không phụ thuộc văn bản}
 \begin{frame}{Giới thiệu}
-	
+	\qquad Hệ thống nhận dạng giọng nói độc lập với văn bản cố gắng giảm thiểu ảnh hưởng của nội dung từ vựng vốn được coi là không xác định đối với khả năng nhận dạng của giọng nói, điều này trái ngược với hệ thống nhận dạng giọng nói phụ thuộc văn bản, đương nhiên việc nghiên cứu và phát triển nó sẽ khó khăn hơn.
+	\begin{itemize}
+		\item Hệ thống cửa sổ phổ âm
+		\item Hệ thống Idiolectal
+		\item Hệ thống ngữ âm
+		\item Hệ thống ngữ điệu
+	\end{itemize}
 \end{frame}
-\begin{frame}{Hệ thống phổ âm trong thời gian ngắn}
-	
+\begin{frame}{Hệ thống cửa sổ phổ âm}
+	Dùng trong việc phân tích phổ trong khoảng thời gian ngắn được sử dụng để mô hình các đặc trưng người nói, nhằm mô hình hóa các “âm thanh” khác nhau mà một người có thế tạo ra
+	\begin{itemize}
+		\item Kỹ thuật Lượng tử hóa Vector (Vector Quantization techniques)
+		\item Gaussian Mixture Model - Universal Background Model
+		\item Discriminative techniques - Kỹ thuật phân tách: Artificial Neural Networks, SVM - Support Vector Machine
+		\item SuperVectors, một kỹ thuật hỗn hợp GMM-SVM
+	\end{itemize}
 \end{frame}
 \begin{frame}{Hệ thống Idiolectal}
-
+	\begin{itemize}
+		\item Doddington đã lập ra mô hình cách sử dụng từ của từng người nói cụ thể bằng cách sử dụng \textbf{n-gram} mô hình hóa các chuỗi từ và xác suất của chúng và chứng minh rằng việc sử dụng các mô hình đó có thể cải thiện hiệu suất của hệ thống GMM âm thanh/ phổ cơ bản. 
+		\item Quan trọng hơn kết quả cụ thể này là thực tế là công trình này đã thúc đẩy nghiên cứu trong việc sử dụng các cấp độ thông tin cao hơn (idiolectal, phonotactic, prosodic, v.v.) để \textbf{nhận dạng giọng nói độc lập với văn bản}. 
+	\end{itemize}
 \end{frame}
 \begin{frame}{Hệ thống ngữ âm}
 	Mô hình hệ thống ngữ âm
@@ -378,13 +388,6 @@
 		\label{fig:writing-thesis}
 	\end{figure}
 \end{frame}	
-\begin{frame}{Công trình tiêu biểu}
-	\begin{itemize}
-		\item Introduction 1
-		\item Introduction 2
-		\item Introduction 3
-	\end{itemize}
-\end{frame}
 
 \subsection{Ứng dụng của nhận dạng giọng nói}
 \begin{frame}{Voice authentication}
@@ -435,6 +438,17 @@
 \end{frame}
 \subsection{Các công trình liên quan}
 \begin{frame}{Công trình tiêu biểu sử dụng d-vectors}
+	Được giới thiệu trong bài báo "Deep neural networks for small footprint text-dependent speaker verification" \textbf{d-vectors} trở thành tiền đề cho hàng loạt các thành công sau này của lĩnh vực Nhận dạng giọng nói sử dụng Deep Learning.
+	
+	\textbf{Giới thiệu chung về bài báo:}
+	\begin{itemize}
+		\item Bài báo: Deep neural networks for small footprint text-dependent speaker verification (Một bước nhỏ trong dùng mạng học sâu cho tác vụ xác minh người nói)
+		\item Nhóm tác giả: Ehsan Variani (Johns Hopkins Univ., Baltimore, MD, USA), Xin Lei, Erik McDermott, Ignacio Lopez Moreno, Javier Gonzalez-Dominguez (Google Inc., USA)
+		\item Được publish tại hội nghị 2014 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), diễn ra tại Florence, Italy, vào năm 2014
+		\item Từ khóa: Deep Neural Networks, Speaker Verification
+	\end{itemize}
+\end{frame}
+\begin{frame}{Công trình tiêu biểu sử dụng d-vectors}
 	Mô hình d-vectors
 	\begin{figure}[H]
 		\includegraphics[width=0.7\linewidth]{images/d-vectors.png}
@@ -443,13 +457,31 @@
 	\end{figure}
 \end{frame}
 \begin{frame}{Công trình tiêu biểu sử dụng d-vectors}
-	Giới thiệu về công trình: Speaker Recognition from raw waveform with SincNet
-\end{frame}
-\begin{frame}{Công trình tiêu biểu sử dụng d-vectors}
 	Phương pháp tiếp cận
+	\begin{itemize}
+		\item Sử dụng Deep Neural Networks trong tác vụ xác minh người nói (Speaker Verification) để rút trích đặc trưng giọng nói và kích hoạt đặc trưng nằm lớp ẩn cuối cùng của mạng học - gọi là d-vectors (Deep Vectors)
+		\item Trong giai đoạn đăng ký (Speaker Enrollment), mô hình DNN được huấn luyện sẵn được sử dụng để rút trích đặc trưng giọng nói của người nói ở lớp cuối cùng. Sau đó tính toán giá trị trung bình của những đặc trưng này, để cho ra d-vector của người nói
+		\item 	Trong giai đoạn đánh giá (Evaluation Stage), một giọng nói cần được xác minh khi vào mô hình sẽ được tính toán để cho ra một d-vector. Sau đó, dùng d-vector này so sánh với những d-vector trong quá trình đăng ký để đưa ra quyết định giọng nói của người nói này có phải là đúng với danh tính đưa ra không.
+	\end{itemize}
 \end{frame}
 \begin{frame}{Công trình tiêu biểu sử dụng d-vectors}
 	Kết quả đạt được
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\linewidth]{images/d-vectors-result-table-02.png}
+		\caption{- Deep Neural Networks for small foot-print text-dependent speaker verification - 2014}
+		\label{fig:writing-thesis}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Công trình tiêu biểu sử dụng j-vectors}
+	\textbf{Giới thiệu chung về bài báo:}
+	\begin{itemize}
+		\item Bài báo: Multi-Task Learning for Text-Dependent Speaker Verification
+		\item Nhóm tác giả: Nanxin Chen, Yanmin Qian, Kai Yu (Shanghai Jiao Tong University, China)
+		\item Được publish tại hội nghị INTERSPEECH 2015 16th Annual Conference of the International Speech Communication Association, diễn ra tại Dresden, Germany, từ ngày 6-10 tháng 9 năm 2015
+		\item Từ khóa: Deep neural network, Multi-task learning (Học đa nhiệm), Speaker verification (Xác minh người nói), Discriminant analysis (Phân tích phân tách), Probabilistic linear discriminant analysis (Phân tích xác suất phân tách tuyến tính), Deep learning (Học Sâu)
+	\end{itemize}
 \end{frame}
 \begin{frame}{Công trình tiêu biểu sử dụng j-vectors}
 	Mô hình j-vectors
@@ -460,16 +492,46 @@
 	\end{figure}
 \end{frame}
 \begin{frame}{Công trình tiêu biểu sử dụng j-vectors}
-	Giới thiệu về công trình
+	Phương pháp tiếp cận: Mô hình Học đa nhiệm Deep Neural Network sử dụng cho Xác minh người nói phụ thuộc văn bản được lấy ý tưởng từ việc sử dụng DNN với số lượng tham số cực lớn, một mô hình DNN có thể học cùng lúc việc phân tách văn bản, lẫn giọng nói
+	
+	Hai hàm mất mát ban đầu là $C_1(y_1, y_1^{'}), C_2(y_2, y_2^{'})$ được dùng để tạo thành hàm tổng mất mát:
+	$$C([y_1, y_2], [y_1^{'}, y_2^{'}]) = C_1(y_1, y_1^{'}) + C_2(y_2, y_2^{'})$$
+	Trong đó:
+	\begin{itemize}
+		\item $C_1, C_2$ lần lượt là hai cross-entropy criteria cho giọng nói và văn bản
+		\item $y_1, y_2$ đại diện cho nhãn đúng của từng người nói và văn bản
+		\item $y_1^{'}, y_2^{'}$ đại diện cho nhãn đầu ra (nhãn dự đoán được) của $y_1, y_2$ tương ứng
+	\end{itemize}
 \end{frame}
 \begin{frame}{Công trình tiêu biểu sử dụng j-vectors}
-	Phương pháp tiếp cận
-\end{frame}
-\begin{frame}{Công trình tiêu biểu sử dụng j-vectors}
-	Các kết quả đạt được
+	\textbf{Các kết quả đạt được}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}[H]
+				\includegraphics[width=1\linewidth]{images/j-vectors-result-table-02.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}[H]
+				\includegraphics[width=1\linewidth]{images/j-vectors-result-table-03.png}
+		\end{figure}
+		\end{column}
+	\end{columns}
 \end{frame}
 \begin{frame}{Công trình tiêu biểu sử dụng x-vectors}
-	Mô hình x-vectors
+\textbf{Giới thiệu chung về bài báo:}
+\begin{itemize}
+	\item Bài báo: X-Vectors: Robust DNN Embeddings for Speaker Recognition
+	\item Nhóm tác giả: 
+	\begin{itemize}
+		\item David Snyder, Daniel Garcia-Romero, Gregory Sell, Daniel Povey, Sanjeev Khudanpur - Center for Language and Speech Processing \& Human Language Technology Center of Excellence, The Johns Hopkins University, Baltimore, MD, USA
+	\end{itemize}
+	\item Được xuất bản tại hội nghị 2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), diễn ra tại Calgary, AB, Canada, năm 2018
+	\item Từ khóa: Speaker Recognition, Deep Neural Networks, Data Augmentation, x-vectors
+\end{itemize}
+\end{frame}
+\begin{frame}{Công trình tiêu biểu sử dụng x-vectors}
+	\textbf{Mô hình} x-vectors
 	\begin{figure}[H]
 		\includegraphics[width=0.65\linewidth]{images/x-vector.jpg}
 		\caption{Mô hình DNN với x-vectors}
@@ -477,19 +539,132 @@
 	\end{figure}
 \end{frame}
 \begin{frame}{Công trình tiêu biểu sử dụng x-vectors}
-	Giới thiệu về công trình
-\end{frame}
-\begin{frame}{Công trình tiêu biểu sử dụng x-vectors}
 	Phương pháp
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\linewidth]{images/x_vectors_dnn.png}
+		\caption{From i-vectors to x-vectors – a generational change in speaker recognition illustrated on the NFI-FRIDA database - OxfordWave Research}
+		\label{fig:writing-thesis}
+	\end{figure}
+	x-vectors sẽ được rút trích tại lớp phân đoạn 6 (segment6), ngay sau khi qua lớp tổng hợp thống kê
 \end{frame}
 \begin{frame}{Công trình tiêu biểu sử dụng x-vectors}
-	Các kết quả đạt được
+	\textbf{Các kết quả đạt được}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{images/x-vectors-result-table-02.png}
+		\caption{x-vector DNN embedding architecture in (Snyder et al., 2018)}
+		\label{fig:writing-thesis}
+	\end{figure}
 \end{frame}
 \begin{frame}{So sánh d-vectors, j-vectors và x-vectors}
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{ |p{1cm} |p{3cm} | p{3cm} | p{3cm}  |}\hline
+			& d-vectors & j-vectors & x-vector \\\hline
+			Kỹ thuật rút trích & DNN & DNN & DNN\\ \hline
+			Ví trí rút trích & Tại lớp ẩn cuối cùng DNN & Tại lớp ẩn cuối cùng DNN & Sau khi qua lớp statistics pooling\\\hline
+			Cách rút trích & Là trung bình kích hoạt tại lớp ẩn cuối cùng & Là trung bình kích hoạt tại lớp ẩn cuối cùng, kết hợp tín hiệu giọng nói và dữ liệu văn bản & Là vector phân đoạn (segment6) sau khi tính toán thống kê\\\hline
+		\end{tabular}
+	\end{table}
+\end{frame}
+\begin{frame}{Công trình tiêu biểu sử dụng Multi-domain features}
+	\textbf{Giới thiệu chung về bài báo:}
+	\begin{itemize}
+		\item Tên bài báo: Multi-task Recurrent Model for Speech and Speaker Recognition
+		\item Nhóm tác giả: Zhiyuan Tang (1) (2) , Lantian Li (1) and Dong Wang (1)
+		\begin{itemize}
+			\item (1): Center for Speech and Language Technologies, Division of Technical Innovation and Development,
+			Tsinghua National Laboratory for Information Science and Technology
+			Center for Speech and Language Technologies, Research Institute of Information Technology, Tsinghua University
+			\item (2): Chengdu Institute of Computer Applications, Chinese Academy of Sciences
+		\end{itemize}
+		\item Bài báo được đăng trên arXiv.org, vào ngày 31, tháng 3 năm 2016 (Phiên bản mới nhất được cập nhật vào ngày 27 tháng 9 năm 2016)
+		\item Từ khóa: Multi-task, Recurrent Model, Speaker Recognition, 
+	\end{itemize}
+\end{frame}
+\begin{frame}{Công trình tiêu biểu sử dụng Multi-domain features}
+	\textbf{Mô hình}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\linewidth]{images/multi-task-recurrent-learning.png}
+		\label{fig:writing-thesis}
+	\end{figure}
+\end{frame}
+\begin{frame}{Công trình tiêu biểu sử dụng Multi-domain features}
+	\textbf{Phương pháp}: Ý tưởng cơ bản của nó là sử dụng đầu ra của một tác vụ như một đầu vào vào của những tác vụ khác (khá tương tự với kiến trúc RNN thông thường). Kết quả đầu ra của một tác vụ ở bước thời gian trước đó $t-1$ được sử dụng để cung cấp cho một tác vụ ở thời điểm $t$ hiện tại.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\linewidth]{images/basis-single-task-model.png}
+		\label{fig:writing-thesis}
+	\end{figure}
+\end{frame}
+\begin{frame}{Công trình tiêu biểu sử dụng Multi-domain features}
+	\textbf{Các kết quả đạt được}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}[H]
+				\includegraphics[width=1\linewidth]{images/multi-task-recurrent-model-asr-baseline-res.png}
+			\end{figure}
+			\begin{figure}[H]
+				\includegraphics[width=1\linewidth]{images/multi-task-recurrent-model-sre-baseline-res.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}[H]
+				\includegraphics[width=1\linewidth]{images/multi-task-recurrent-model-joint-training-res.png}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+\begin{frame}{Công trình tiêu biểu: SincNet}
+	\textbf{Giới thiệu chung về bài báo:}
+	\begin{itemize}
+		\item Bài báo: Speaker Recognition from Raw waveform with SincNet
+		\item Nhóm tác giả: Mirco Ravanelli, Yoshua Bengio
+		\item Được công bố trên arXiv.org vào năm 2018
+		\item Từ khóa: speaker recognition, convolutional neural networks, raw samples.
+	\end{itemize}
+\end{frame}
+\begin{frame}{Công trình tiêu biểu sử dụng SincNet}
+	\textbf{Mô hình}
+	\begin{figure}[H]
+		\includegraphics[width=0.4\linewidth]{images/SincNet.png}
+		\caption{The SincNet Architecture}
+		\label{fig:writing-thesis}
+	\end{figure}
+\end{frame}
+\begin{frame}{Công trình tiêu biểu: SincNet}
+	\textbf{Phương pháp} Sincnet thực hiện các phép tích chập của nó với hàm $g$, hàm này phụ thuộc vào một tham số $\theta$. Công thức như sau:
 	
+	$$y[n] = x[n] * g[n, \theta]$$
+	
+	Trong xử lý tín hiệu số, $g$ được định nghĩa như một filter-bank gồm các bộ lọc (filter) băng thông hình chữ nhật. Trong miền tần số, độ lớn của một bộ lọc băng thông tổng quát có thể được tính như hiệu số giữa 2 bộ lọc thông tần số thấp
+	
+	Với $f_1$ $f_2$ lần lượt là tần số cắt thấp (low) và cao (high) đã được học, $rect(.)$ là hàm rectangular trong miền tần số.
+	
+	$$G[f, f_1, f_2] = rect\left(\frac{f}{2f_2}\right) -  rect\left(\frac{f}{2f_1}\right)$$
+\end{frame}
+\begin{frame}{Công trình tiêu biểu: SincNet}
+	\textbf{Các kết quả đạt được}\newline
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			Speaker Identification Task
+			\begin{figure}[H]
+				\includegraphics[width=1\linewidth]{images/performance_speaker_identification.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			Speaker Verification Task
+			\begin{figure}[H]
+				\includegraphics[width=1\linewidth]{images/performance_speaker_verification.png}
+			\end{figure}
+		\end{column}
+	\end{columns}
 \end{frame}
 \subsection{Thực nghiệm}
 \begin{frame}{Thực nghiệm}
+	\huge Phần thực hành demo với SincNet
 \end{frame}
 \subsection{Tài liệu tham khảo - References}
 \begin{frame}
