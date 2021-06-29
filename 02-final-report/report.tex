@@ -216,7 +216,7 @@
 	\end{itemize}
 	
 	\subsubsection{2.2 Đặc trưng ngữ âm}
-	\paragraph{Phonotactics characteristics - Đặc trưng ngữ âm} mô tả cách sử dụng của người nói của các đơn vị ngữ âm và khả năng nhận ra khả dụng. 
+	\paragraph{Phonotactics characteristics - Đặc trưng ngữ âm} Mô tả cách sử dụng của người nói của các đơn vị ngữ âm và khả năng sử dụng có thể khác nhau giữa những người nói.
 	
 	Ngữ âm là rất cần thiết cho việc sử dụng đúng đắn về một ngôn ngữ, và một chìa khóa trong việc học ngoại ngữ, nhưng khi chúng ta nhìn vào nét đặc trưng phonotactic người nói, chúng ta có thể tìm thấy một số kiểu sử dụng khác biệt với những người dùng khác.
 	
@@ -246,7 +246,7 @@
 	\subsubsection{3.1 Phân tích cửa sổ (Short-term Analysis)}
 	\qquad Để thực hiện phân tích phổ đáng tin cậy, các tín hiệu phải thể hiện các đặc tính tĩnh, điều này không dễ quan sát trong các tín hiệu giọng nói thay đổi liên tục. 
 	
-	Để giải quyết vấn đề trên, người ta thường giới hạn cửa sổ phân tích, thường dùng cửa sổ dạng cosine như hamming hoặc hanning, với độ dài ngắn từ 20 đến 40 mili giây, hệ thống ngữ âm của chúng ta không thể thay đổi đáng kể trong một khung thời gian ngắn như vậy, thu được những gì thường được gọi là tín hiệu giả tĩnh trên mỗi khung. Quá trình này được mô tả trong hình 8.1 sách Handbook of Biometrics.
+	Để giải quyết vấn đề trên, người ta thường giới hạn cửa sổ phân tích, thường dùng cửa sổ dạng cosine như hamming hoặc hanning, với độ dài ngắn từ 20 đến 40 mili giây, hệ thống ngữ âm của chúng ta không thể thay đổi đáng kể trong một khung thời gian ngắn như vậy, những gì thu được  thường được gọi là tín hiệu giả tĩnh trên mỗi khung. Quá trình này được mô tả trong hình 8.1 sách Handbook of Biometrics.
 	
 	\begin{figure}[H]
 		\centering
@@ -302,7 +302,7 @@
 	Huấn luyện HMM thường được thực hiện thông qua ước lượng Baum-Welch, trong khi giải mã và căn chỉnh thời gian thường được thực hiện thông qua giải mã Viterbi. Hiệu suất của các phổ HMM đó được cải thiện bằng cách sử dụng các mô hình ngôn ngữ, mô hình này áp đặt một số ràng buộc về ngôn ngữ hoặc ngữ pháp đối với sự kết hợp gần như vô hạn của tất cả các đơn vị có thể. Để cho phép tăng hiệu quả, việc lược bớt tìm kiếm chùm tia cũng là một cơ chế tổng quát để đẩy nhanh đáng kể quá trình nhận dạng mà không có hoặc ít suy giảm hiệu suất.
 	
 	\subsubsection{3.4 Phân tách ngữ điệu (Prosodic Tokenization)}
-	\qquad Các đặc trưng ngữ điệu cơ sở như cao độ và năng lượng cũng có được ở mức frame. Năng lượng cửa sổ thu được rất dễ dàng thông qua định lý Parseval, ở dạng thời gian hoặc dạng phổ, và cao độ tức thời có thể được xác định bằng, ví dụ, phương pháp tự tương quan hoặc dựa trên phân rã cepstral, thường được làm mịn bằng một số lọc thời gian.
+	\qquad Các đặc trưng ngữ điệu cơ sở như cao độ và năng lượng cũng có được ở mức frame. Năng lượng cửa sổ thu được rất dễ dàng thông qua định lý Parseval, ở dạng thời gian hoặc dạng phổ, và cao độ tức thời có thể được xác định bằng, ví dụ như, phương pháp tự động tương quan hoặc dựa trên phân rã cepstral, thường được làm mịn bằng một số lọc thời gian.
 	
 	 Các đặc điểm thuận âm quan trọng khác là những đặc điểm liên quan đến thời lượng của các đơn vị ngôn ngữ, tốc độ nói và tất cả những đặc điểm liên quan đến trọng âm. 
 	 
@@ -329,7 +329,7 @@
 	
 	Có hai phương pháp đã được sử dụng rộng rãi: 
 	\begin{itemize}
-		\item \textbf{Phương pháp dựa trên khuôn mẫu}: bao gồm một số chuỗi vectơ tương ứng với lời nói đăng ký và việc nhận dạng được thực hiện bằng cách so sánh lời nói xác minh với lời nói đăng ký. So sánh này được thực hiện bằng cách sử dụng Dynamic Time Warping (DTW) như một cách hiệu quả để cải thiện sai lệch thời gian giữa các cách phát âm khác nhau.
+		\item \textbf{Phương pháp dựa trên khuôn mẫu}: bao gồm một số chuỗi vector tương ứng với lời nói đăng ký và việc nhận dạng được thực hiện bằng cách so sánh lời nói xác minh với lời nói đăng ký. So sánh này được thực hiện bằng cách sử dụng Dynamic Time Warping (DTW) như một cách hiệu quả để cải thiện sai lệch thời gian giữa các cách phát âm khác nhau.
 		\item \textbf{Phương pháp thống kê}: Nổi bật nhất là \textbf{mô hình Markov ẩn (HMM)}, có xu hướng được sử dụng thường xuyên hơn các mô hình dựa trên khuôn mẫu. HMMs cung cấp tính linh hoạt hơn, cho phép chọn đơn vị tiếng nói từ đơn vị âm vị phụ đến từ và cho phép thiết kế hệ thống nhắc văn bản.
 	\end{itemize}
 	\subsubsection{4.2 Kho ngữ liệu}
@@ -545,7 +545,7 @@
 	\begin{itemize}
 		\item Tên đầy đủ: VoxCeleb: a large-scale speaker identification dataset
 		\item Tác giả/ Nhóm tác giả: Arsha Nagrani, Joon Son Chung, Andrew Zisserman (Visual Geometry Group, Department of Engineering Science, University of Oxford, UK)
-		\item Mô tả sơ lược: kho ngữ liệu chứa hơn 100.000 câu nói cho 1.251 người nổi tiếng, được trích xuất từ các video tải lên YouTube. Bộ dữ liệu cân bằng về giới tính, với 55\% người nói là nam giới. Các diễn giả trải dài một loạt các sắc tộc, giọng, nghề nghiệp và độ tuổi khác nhau. Quốc tịch và giới tính của mỗi người nói (lấy từ Wikipedia) cũng được cung cấp.
+		\item Mô tả sơ lược: kho ngữ liệu chứa hơn 100.000 câu nói cho 1.251 người nổi tiếng, được trích xuất từ các video tải lên YouTube. Bộ dữ liệu cân bằng về giới tính, với 55\% người nói là nam giới. Những người nói thuộc các sắc tộc, giọng, nghề nghiệp và độ tuổi khác nhau. Quốc tịch và giới tính của mỗi người nói (lấy từ Wikipedia) cũng được cung cấp.
 	\end{itemize}
 	\textbf{Kho ngữ liệu VoxCeleb2 (Chung et. al, 2018)}
 	\begin{itemize}
@@ -846,7 +846,7 @@
 		\item Học có giám sát, x-vectors DNN được huấn luyện bằng cách dùng dữ liệu có nhãn người nói
 		\item DNN x-vector có khả năng khai thác lượng dữ liệu huấn luyện lớn hơn so với khung i-vector, nó bão hòa sau một lượng dữ liệu huấn luyện nhất định.
 		\item khả năng khai thác lượng dữ liệu huấn luyện lớn hơn cũng tạo điều kiện cho một phương pháp thúc đẩy số lượng và tính đa dạng của dữ liệu huấn luyện được gọi là tăng cường dữ liệu. Quá trình này thêm tiếng ồn và nhiễu vào các mẫu huấn luyện và đưa chúng vào huấn luyện cùng với các mẫu ban đầu.
-		\item Khả năng sử dụng cùng front-end (trích xuất đặc trưng) và back-end (so sánh vector) cho cả hệ thống i-vectơ và x-vectơ tạo điều kiện tích hợp hệ thống và cho phép so sánh trực tiếp hơn giữa hai phương pháp mô hình hóa.
+		\item Khả năng sử dụng cùng front-end (trích xuất đặc trưng) và back-end (so sánh vector) cho cả hệ thống i-vector và x-vector tạo điều kiện tích hợp hệ thống và cho phép so sánh trực tiếp hơn giữa hai phương pháp mô hình hóa.
 	\end{itemize}
 	
 	\subsubsection{D.2.5.4 So sánh d-vectors, j-vectors và x-vectors}
@@ -1322,6 +1322,31 @@
 	Lưu ý: Theo bài báo, nhóm chia tín hiệu giọng nói thành các phần 200ms với 10ms chồng lên nhau. Đối với mỗi đoạn, SincNet thực hiện dự đoán trên bộ dữ liệu người nói. Để tính toán tỷ lệ lỗi phân loại này, nhóm lấy trung bình các dự đoán và đối với mỗi câu, nhóm chọn người nói có xác suất trung bình cao nhất.
 	
 	Với tác vụ SI, nhóm chia dữ liệu ra làm 2 loại, người nói mang id chẵn, người nói mang id lẻ, sau đó tính toán ROC AUC (Compute Area Under the Receiver Operating Characteristic Curve), AP(average precision)
+	
+	AUC (Area Under The Curve) - ROC (Receiver Operating Characteristics) là một phương pháp tính toán hiệu suất của một mô hình phân loại theo các ngưỡng phân loại khác nhau. Giả sử với bài toán phân loại nhị phân (2 lớp) sử dụng hồi quy logistic (logistic regression), việc chọn các ngưỡng phân loại [0..1] khác nhau sẽ ảnh hưởng đến khả năng phân loại của mô hình và ta cần tính toán được mức độ ảnh hưởng của các ngưỡng
+	
+	ROC là một đường cong biểu diễn xác suất và AUC biểu diễn mức độ phân loại của mô hình
+	
+	Ý nghĩa: 
+	- Xác suất rằng một mẫu Positive được lấy ngẫu nhiên sẽ được xếp hạng cao hơn một mẫu Negative được lấy ngẫu nhiên. Biểu diễn theo công thức, ta có AUC = P(score(x+) > score(x-))
+	- Chỉ số AUC càng cao thì mô hình càng chính xác trong việc phân loại các lớp.
+	
+	
+	Theo Machinelearning cơ bản:
+	
+	Với bài toán phân loại mà tập dữ liệu của các lớp là chênh lệch nhau rất nhiều có một phép đó hiệu quả thường được sử dụng là Precision-Recall.
+	
+	Với một cách xác định một lớp là positive, Precision được định nghĩa là tỉ lệ số điểm true positive trong số những điểm được phân loại là positive (TP + FP).
+	
+	Recall được định nghĩa là tỉ lệ số điểm true positive trong số những điểm thực sự là positive (TP + FN).
+	
+	$$\text{Precision} = \frac{\text{True Positive}}{\text{True Positive} + \text{False Positive}}$$
+	
+	$$\text{Recall} = \frac{\text{True Positive}}{\text{True Positive} + \text{False Negative}}$$
+	
+	Precision cao đồng nghĩa với việc độ chính xác của các điểm tìm được là cao. Recall cao đồng nghĩa với việc True Positive Rate cao, tức tỉ lệ bỏ sót các điểm thực sự positive là thấp.
+	
+	Tương tự như ROC curve, chúng ta cũng có thể đánh giá mô hình dựa trên việc thay đổi một ngưỡng và quan sát giá trị của Precision và Recall. Khái niệm Area Under the Curve (AUC) cũng được định nghĩa tương tự. Với Precision-Recall Curve, AUC còn có một tên khác là Average precision (AP).
 	\subsection{E.5 Các kết quả}
 	\subsubsection{E.5.1 Kết quả thực nghiệm trên tập TIMIT}
 	\begin{figure}[H]
@@ -1435,7 +1460,44 @@
 	\begin{itemize}
 		\item AP =  1.0
 	\end{itemize}
+	\subsubsection{E.5.4 Suy luận từ mô hình nhận dạng giọng nói tiếng Việt}
+	Kiểm tra suy luận từ mô hình với giọng nói thu từ trình duyệt Google Colab
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.75\textwidth]{result/get_audio.png}
+		\caption{Hàm thu âm giọng nói từ trình duyệt}
+		\label{fig:writing-thesis}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.75\textwidth]{result/get_sound_from_browser.png}
+		\caption{Thu giọng nói từ trình duyệt}
+		\label{fig:writing-thesis}
+	\end{figure}
+	Trực quan hình ảnh dạng tần số của âm thanh giọng nói
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.75\textwidth]{result/sound_hz.png}
+		\caption{Trực quan hình ảnh dạng tần số của âm thanh giọng nói}
+		\label{fig:writing-thesis}
+	\end{figure}
+	Tiến hành tải mô hình đã được huấn luyện, và đưa ra suy luận
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.75\textwidth]{result/test_inference_00.png}
+		\caption{Suy luận từ mô hình}
+		\label{fig:writing-thesis}
+	\end{figure}
+	Kết quả cho thấy mô hình dự đoán sai, không xuất ra "Welcome, Le Nhut Nam". Điều này được nhóm cho là mô hình bị mắc phải vấn đề overfitting do tập dữ liệu huấn luyện khá nhỏ.
 	
+	Dự đoán từ những âm thanh thu từ micro điện thoại
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.75\textwidth]{result/test_inference_01.png}
+		\caption{Suy luận từ mô hình}
+		\label{fig:writing-thesis}
+	\end{figure}
+	Kết quả cho thấy mô hình dự đoán đúng, xuất ra "Welcome, Le Nhut Nam". Điều này cho thấy dữ liệu khớp với những mẫu âm thanh giọng nói thu từ điện thoại hơn là thu được từ máy tính.
 	\subsection{E.6 Những nhận xét}
 	Tổng kết lại những gì tìm hiểu được
 	\begin{itemize}
@@ -1450,6 +1512,7 @@
 			\item Nhóm đã thực hiện thu thập dữ liệu, huấn luyện cơ bản, nắm cách hoạt động của một Speaker Recognition Pipeline
 			\item Đọc hiểu source code Pytorch implement SincNet của tác, thiết lập và tùy chỉnh lại theo đúng với dữ liệu của nhóm
 			\item Trực quan kết quả, đạt được những kết quả tương đối tốt và gần giống với kết quả từ bài báo
+			\item Thử nghiệm dự đoán từ mô hình SincNet với tiếng Việt, bị overfitting do tập dữ liệu quá nhỏ.
 		\end{itemize}
 	\end{itemize}
 	\nocite{*}
